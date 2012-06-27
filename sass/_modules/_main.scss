@@ -1,3 +1,17 @@
 // ---------------------------------------------------------------------------
 // Main Content
 
+[role="main"] {
+  counter-reset: main;
+  h2 {
+    margin-top: 2.25em;
+    padding-top: .5em;
+    border-top: .25em solid;
+    &:before {
+      counter-increment: main;
+      content: "0.1." counter(main, decimal-leading-zero) " // ";
+      font-weight: normal;
+    }
+  }
+}
+

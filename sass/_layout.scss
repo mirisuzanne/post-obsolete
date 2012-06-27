@@ -5,4 +5,7 @@ body {
   @include pie-clearfix;
   @include container;
   @include susy-grid-background;
+  margin-top: 0;
+  border-top: .5em solid red;
+  background: white;
 }

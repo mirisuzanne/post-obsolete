@@ -4,3 +4,33 @@
 $link   : '&:link, &:visited';
 $focus  : '&:hover, &:focus, &:active';
 
+html {
+  // background: image-url('dance.jpg') fixed;
+}
+
+iframe[src*="youtube"] {
+  width: 39em;
+  height: 29.25em;
+  max-width: 100%;
+}
+
+figure {
+  border: 1px dotted;
+  margin: 0;
+  padding: 1.5em;
+  background: #eee;
+  text-align: center;
+  img { margin-bottom: 1em; }
+}
+
+figcaption {
+  font-style: italic;
+  text-align: left;
+  em { font-weight: bold; }
+}
+
+img {
+  @include box-sizing(border-box);
+  max-width: 100%;
+  border: 1px solid;
+}

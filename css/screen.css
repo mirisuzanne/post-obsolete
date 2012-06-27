@@ -1,4 +1,37 @@
 @charset "UTF-8";
+iframe[src*="youtube"] {
+  width: 39em;
+  height: 29.25em;
+  max-width: 100%;
+}
+
+figure {
+  border: 1px dotted;
+  margin: 0;
+  padding: 1.5em;
+  background: #eee;
+  text-align: center;
+}
+figure img {
+  margin-bottom: 1em;
+}
+
+figcaption {
+  font-style: italic;
+  text-align: left;
+}
+figcaption em {
+  font-weight: bold;
+}
+
+img {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%;
+  border: 1px solid;
+}
+
 body {
   *zoom: 1;
   *zoom: 1;
@@ -16,6 +49,9 @@ body {
   -webkit-background-clip: content-box;
   -moz-background-clip: content-box;
   background-clip: content-box;
+  margin-top: 0;
+  border-top: .5em solid red;
+  background: white;
 }
 body:after {
   content: "";
@@ -26,4 +62,26 @@ body:after {
   content: "";
   display: table;
   clear: both;
+}
+
+[role="banner"] {
+  padding-top: 44.313em;
+  background: url('../img/no-books.jpg?1340830567') no-repeat scroll center 1em;
+}
+[role="banner"] p {
+  font-style: italic;
+}
+
+[role="main"] {
+  counter-reset: main;
+}
+[role="main"] h2 {
+  margin-top: 2.25em;
+  padding-top: .5em;
+  border-top: .25em solid;
+}
+[role="main"] h2:before {
+  counter-increment: main;
+  content: "0.1." counter(main, decimal-leading-zero) " // ";
+  font-weight: normal;
 }
