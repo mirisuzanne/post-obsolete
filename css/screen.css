@@ -11,7 +11,7 @@ iframe[src*="youtube"] {
 
 figure {
   border: 1px dotted;
-  margin: 0;
+  margin: 0 0 1em 0;
   padding: 1.5em;
   background: #eee;
   text-align: center;
@@ -63,7 +63,7 @@ body {
   -moz-background-clip: content-box;
   background-clip: content-box;
   margin-top: 0;
-  border-top: .5em solid red;
+  border-top: .5em solid;
   background: white;
 }
 body:after {
@@ -78,8 +78,8 @@ body:after {
 }
 
 [role="banner"] {
-  padding-top: 44.313em;
-  background: url('../img/no-books.jpg?1340830567') no-repeat scroll center 1em;
+  padding-top: 23.875em;
+  background: url('../img/no-book.png?1340920037') no-repeat scroll center 1em;
 }
 [role="banner"] p {
   font-style: italic;

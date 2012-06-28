@@ -2,7 +2,7 @@
 // Site Banner
 
 [role="banner"] {
-  padding-top: (image-height('no-books.jpg')/16px*1em) + 2em;
-  background: image-url('no-books.jpg') no-repeat scroll center 1em;
+  padding-top: (image-height('no-book.png')/16px*1em) + 2em;
+  background: image-url('no-book.png') no-repeat scroll center 1em;
   p { font-style: italic; }
 }
