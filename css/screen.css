@@ -86,3 +86,8 @@ body:after {
   content: "0.1." counter(main, decimal-leading-zero) " // ";
   font-weight: normal;
 }
+
+[role="contentinfo"] {
+  margin-top: 6em;
+  border-top: .5em solid;
+}
