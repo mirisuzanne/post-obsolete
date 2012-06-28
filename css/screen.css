@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html {
+  counter-reset: figures;
+}
+
 iframe[src*="youtube"] {
   width: 39em;
   height: 29.25em;
@@ -22,6 +26,14 @@ figcaption {
 }
 figcaption em {
   font-weight: bold;
+}
+figcaption:before {
+  content: "fig." counter(figures);
+  font-weight: bold;
+}
+
+[id^="fig"] {
+  counter-increment: figures;
 }
 
 img {
@@ -83,7 +95,7 @@ body:after {
 }
 [role="main"] h2:before {
   counter-increment: main;
-  content: "0.1." counter(main, decimal-leading-zero) " // ";
+  content: "Part " counter(main, decimal-leading-zero) " // ";
   font-weight: normal;
 }
 

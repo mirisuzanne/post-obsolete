@@ -9,7 +9,7 @@
     border-top: .25em solid;
     &:before {
       counter-increment: main;
-      content: "0.1." counter(main, decimal-leading-zero) " // ";
+      content: "Part " counter(main, decimal-leading-zero) " // ";
       font-weight: normal;
     }
   }

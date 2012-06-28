@@ -5,7 +5,7 @@ $link   : '&:link, &:visited';
 $focus  : '&:hover, &:focus, &:active';
 
 html {
-  // background: image-url('dance.jpg') fixed;
+  counter-reset: figures;
 }
 
 iframe[src*="youtube"] {
@@ -27,6 +27,14 @@ figcaption {
   font-style: italic;
   text-align: left;
   em { font-weight: bold; }
+  &:before {
+    content: "fig." counter(figures);
+    font-weight: bold;
+  }
+}
+
+[id^="fig"] {
+  counter-increment: figures;
 }
 
 img {
