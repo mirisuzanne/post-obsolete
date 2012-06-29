@@ -4,9 +4,12 @@ html {
 }
 
 iframe[src*="youtube"] {
-  width: 39em;
-  height: 29.25em;
-  max-width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 29em;
+  border: 1px solid;
 }
 
 figure {
@@ -16,11 +19,9 @@ figure {
   background: #eee;
   text-align: center;
 }
-figure img {
-  margin-bottom: 1em;
-}
 
 figcaption {
+  margin-top: 1em;
   font-style: italic;
   text-align: left;
 }
@@ -28,12 +29,16 @@ figcaption em {
   font-weight: bold;
 }
 figcaption:before {
-  content: "fig." counter(figures);
+  content: "fig." counter(figures, decimal-leading-zero);
   font-weight: bold;
 }
 
-[id^="fig"] {
+[href^="#fig-"] {
   counter-increment: figures;
+}
+[href^="#fig-"]:after {
+  content: "fig." counter(figures, decimal-leading-zero);
+  font-style: italic;
 }
 
 img {
