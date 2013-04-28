@@ -23,5 +23,6 @@ $focus  : '&:hover, &:focus, &:active';
 
 .media {
   @include fluid-ratio;
+  border: 1px solid;
 }
 
