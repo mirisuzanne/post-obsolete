@@ -4,8 +4,51 @@
 body {
   @include pie-clearfix;
   @include container;
-  @include susy-grid-background;
-  margin-top: 0;
-  border-top: .5em solid;
+  @include h-borders(9px,1);
+  min-height: 100%;
+  padding-right: rhythm(1);
+  padding-left: rhythm(1);
+  color: $base;
   background: white;
+  border-color: $red;
+}
+
+
+
+@include breakpoint(40em) {
+  [role="banner"], [role="contentinfo"] { @include span(first 6); }
+  [role="main"] { @include span(last 6); }
+
+  [role="banner"] {
+    @include padding-leader(2);
+    margin-top: 2px;
+  }
+}
+
+@include breakpoint(48em) {
+  [role="banner"], [role="contentinfo"] { @include span(first 5); }
+  [role="main"] { @include span(last 7); }
+}
+
+[role="banner"] {
+  figcaption {
+    @include rhythm-margins;
+    color: color(light);
+    font-style: italic;
+  }
+  strong {
+    color: $base;
+    font-weight: bold;
+    font-style: normal;
+  }
+}
+
+[role="contentinfo"] {
+  @include row;
+  @include leading-border(1px,1);
+  @include transition(opacity 300ms);
+  opacity: .25;
+  border-style: dotted;
+
+  &:hover { opacity: 1; }
 }

@@ -4,16 +4,13 @@
 @import "compass";
 @import "compass/layout";
 @import "susy";
+@import "breakpoint";
+@import "accoutrement";
 
 //-----------------------------------------------------------------------------
 // Grid Settings
 
-$total-columns: 8;
-$column-width: 4em;
-$gutter-width: 1em;
-$grid-padding: $gutter-width;
-
-$show-grid-backgrounds: false;
+@include set-grid(90em 12 .25 before);
 
 //-----------------------------------------------------------------------------
 // Other Settings
