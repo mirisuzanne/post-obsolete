@@ -34,11 +34,10 @@
 
 
   %hide-tab-content {
-    opacity: 0;
+    display: none;
   }
   %show-tab-content {
-    opacity: 1;
-    z-index: 100;
+    display: block;
   }
 
   @include tabs(maintitle
@@ -58,6 +57,7 @@
 
 .slide {
   @include span(100% at 1 isolate no-gutters);
+  @include trailer;
   position: relative;
 
   h2 {

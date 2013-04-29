@@ -234,17 +234,17 @@ body:after {
   background: white;
 }
 [role="main"] [class*="maintitle"], [role="main"] [class*="booktitle"], [role="main"] [class*="youtube"], [role="main"] [class*="church"], [role="main"] [class*="magic"], [role="main"] [class*="wordtitle"], [role="main"] [class*="bone"], [role="main"] [class*="definitiontitle"], [role="main"] [class*="maginot"], [role="main"] [class*="fan"], [role="main"] [class*="meaningtitle"], [role="main"] [class*="snail"], [role="main"] [class*="pentitle"], [role="main"] [class*="fountainpen"], [role="main"] [class*="obsoletetitle"], [role="main"] [class*="abacus"], [role="main"] [class*="sorrytitle"], [role="main"] [class*="lathe"], [role="main"] [class*="cloudtitle"], [role="main"] [class*="play"], [role="main"] [class*="farm"], [role="main"] [class*="architecturetitle"], [role="main"] [class*="handshake"], [role="main"] [class*="ritualtitle"], [role="main"] [class*="dance"], [role="main"] [class*="dogs"], [role="main"] [class*="trans"] {
-  opacity: 0;
+  display: none;
 }
 [role="main"] [id*="maintitle"]:checked ~ [class*="maintitle"], [role="main"] [id*="booktitle"]:checked ~ [class*="booktitle"], [role="main"] [id*="youtube"]:checked ~ [class*="youtube"], [role="main"] [id*="church"]:checked ~ [class*="church"], [role="main"] [id*="magic"]:checked ~ [class*="magic"], [role="main"] [id*="wordtitle"]:checked ~ [class*="wordtitle"], [role="main"] [id*="bone"]:checked ~ [class*="bone"], [role="main"] [id*="definitiontitle"]:checked ~ [class*="definitiontitle"], [role="main"] [id*="maginot"]:checked ~ [class*="maginot"], [role="main"] [id*="fan"]:checked ~ [class*="fan"], [role="main"] [id*="meaningtitle"]:checked ~ [class*="meaningtitle"], [role="main"] [id*="snail"]:checked ~ [class*="snail"], [role="main"] [id*="pentitle"]:checked ~ [class*="pentitle"], [role="main"] [id*="fountainpen"]:checked ~ [class*="fountainpen"], [role="main"] [id*="obsoletetitle"]:checked ~ [class*="obsoletetitle"], [role="main"] [id*="abacus"]:checked ~ [class*="abacus"], [role="main"] [id*="sorrytitle"]:checked ~ [class*="sorrytitle"], [role="main"] [id*="lathe"]:checked ~ [class*="lathe"], [role="main"] [id*="cloudtitle"]:checked ~ [class*="cloudtitle"], [role="main"] [id*="play"]:checked ~ [class*="play"], [role="main"] [id*="farm"]:checked ~ [class*="farm"], [role="main"] [id*="architecturetitle"]:checked ~ [class*="architecturetitle"], [role="main"] [id*="handshake"]:checked ~ [class*="handshake"], [role="main"] [id*="ritualtitle"]:checked ~ [class*="ritualtitle"], [role="main"] [id*="dance"]:checked ~ [class*="dance"], [role="main"] [id*="dogs"]:checked ~ [class*="dogs"], [role="main"] [id*="trans"]:checked ~ [class*="trans"] {
-  opacity: 1;
-  z-index: 100;
+  display: block;
 }
 
 .slide {
   width: 100%;
   float: left;
   margin-right: -100%;
+  margin-bottom: 1.25rem;
   position: relative;
 }
 .slide h2 {
