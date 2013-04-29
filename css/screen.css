@@ -211,12 +211,12 @@ body:after {
   padding: 1.5em;
   background: #e5e5e5;
   text-align: center;
-  counter-increment: figures;
 }
 [role="main"] figcaption {
   margin-top: 1em;
   font-style: italic;
   text-align: left;
+  counter-increment: figures;
 }
 [role="main"] figcaption em {
   font-weight: bold;

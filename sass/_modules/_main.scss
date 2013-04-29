@@ -11,13 +11,13 @@
     padding: 1.5em;
     background: color(lightest);
     text-align: center;
-    counter-increment: figures;
   }
 
   figcaption {
     margin-top: 1em;
     font-style: italic;
     text-align: left;
+    counter-increment: figures;
     em { font-weight: bold; }
     &:before {
       content: "fig." counter(figures, decimal-leading-zero);
