@@ -1,0 +1,37 @@
+# humanstxt.org
+
+# TEAM
+
+  Eric A. Meyer
+  - Site: http://eric.andmeyer.com/
+  - Twitter: @eriiicam
+  - Location: Denver, CO
+
+
+# THANKS
+
+  Michelle Ellsworth
+  - Editor/Collaborator
+  - "The Lesbian Dancer"
+  - Site: http://www.michelleellsworth.com
+  - Video: http://www.michelleellsworth.com/video/TLD.html
+
+  Julie Rada
+  - Editor/Collaborator
+
+  The Widow's Bane
+  - "Wormwood Waltz in C Minor"
+  - Facebook: https://www.facebook.com/thewidowsbane
+  - MySpace: https://myspace.com/widowsbane
+
+# SITE
+
+  Last update: 2013/06/18
+  Language: English
+  Doctype: HTML5
+
+# TECHNOLOGY COLOPHON
+
+  HTML5, CSS3, Modernizr
+  Sublime Text, InDesign, iMovie
+  Google Docs, Vimeo, Github
