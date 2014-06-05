@@ -1,0 +1,82 @@
+// Typography
+// ==========
+
+$base-line-height: size(medium);
+
+$rhythm-unit: rem;
+$rem-with-px-fallback: false;
+
+$relative-font-sizing: true;
+$round-to-nearest-half-line: true;
+
+
+// Headings
+// --------
+
+%h1 {
+  @include font-size(larger);
+  margin-bottom: size(medium);
+}
+
+%h2 {
+  @include font-size(larger);
+  margin-bottom: size(smallest);
+}
+
+%h3,
+%h4,
+%h5 {
+  font-weight: bold;
+  margin-bottom: size(smaller);
+}
+
+
+// Links
+// -----
+
+$link: '&:link, &:visited';
+$focus: '&:hover, &:focus, &:active';
+
+%link {
+  color: color(action);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+%link-focus {
+  color: color(focus);
+}
+
+
+// Lists
+// -----
+
+%ordered-list-styles {
+  list-style: decimal;
+}
+
+%undered-list-styles {
+  list-style: disc;
+}
+
+%nested-list-styles {
+  margin-left: size(normal);
+}
+
+%list-styles {
+  margin-bottom: size(normal);
+  margin-left: size(normal);
+}
+
+%inline-list {
+  @include delimited-list;
+}
+
+
+// Blocks
+// ------
+
+%paragraph-styles {
+  margin-bottom: size(normal);
+  max-width: 40em;
+}

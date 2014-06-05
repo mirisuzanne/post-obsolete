@@ -1,0 +1,45 @@
+// Sound And Fury
+// ==============
+
+.sound-and-fury {
+  @include translate3d(-50%, -50%, 0);
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 50%;
+  z-index: -1;
+}
+
+
+// Instigate
+// ---------
+
+.instigate {
+  @extend %button-reset;
+  @include stretch;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 900;
+
+  b {
+    @extend %button;
+    @include animation(DOITDOIDOIT 300ms steps(1) infinite);
+    @include background(image-url('ui/doit.png') scroll percentage(random()) percentage(random()));
+    @include background-size(300% auto);
+    cursor: pointer;
+    padding: size(large);
+
+    &:hover, &:focus {
+      @extend %button-focus;
+    }
+  }
+
+  &:active b {
+    @extend %button-active;
+  }
+
+  @include breakpoint(40em) {
+    @include font-size(large);
+  }
+}

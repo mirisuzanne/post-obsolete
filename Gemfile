@@ -1,12 +1,8 @@
 source "http://rubygems.org"
 
-gem "sass", "~> 3.2.3"
-gem "compass", :git => "git://github.com/chriseppstein/compass", :branch => "master"
-gem "susy", :git => "git://github.com/ericam/susy", :branch => "susy-next"
-gem "accoutrement", :git => "git://github.com/ericam/accoutrement", :branch => "master"
+gem "sass", "~> 3.3.6"
+gem "compass", "~> 1.0.0.alpha.19"
+gem "susy", "~> 2.1.2"
+gem "accoutrement", "~> 1.0.0.beta.2"
 
-gem "chunky_png", "~> 1.2.6"
-gem "modular-scale", "~> 1.0.2"
-gem "animate", "~> 0.2.beta.0"
-gem "breakpoint", "~> 1.3"
-gem 'rb-fsevent', '~> 0.9.2'
+gem "breakpoint", "~> 2.4.2"

@@ -1,0 +1,138 @@
+// Slides
+// ======
+
+$slides:
+  start
+  maintitle
+  booktitle youtube church magic
+  wordtitle bone
+  definitiontitle maginot fan
+  meaningtitle snail
+  pentitle fountainpen
+  obsoletetitle abacus
+  sorrytitle lathe
+  cloudtitle play farm
+  architecturetitle handshake
+  ritualtitle dance dogs trans
+;
+
+@include keyframes(DOITDOIDOIT) {
+  @for $i from 1 through 10 {
+    #{$i * 10%} {
+      background-position: percentage(random()) percentage(random());
+    }
+  }
+}
+
+.slide {
+  @include stretch;
+  @include transition(all 400ms);
+  @include display-flex;
+  @include justify-content(center);
+  @include align-items(stretch);
+  opacity: 0;
+  overflow: auto;
+  padding: size(largest);
+  z-index: -1;
+}
+
+.the-shitz {
+  @include display-flex;
+  @include flex-direction(column);
+  @include flex(1);
+  z-index: -1;
+
+  .image {
+    @include flex(1);
+    position: relative;
+  }
+
+  img {
+    @include translate3d(-50%, -50%, 0);
+    left: 50%;
+    min-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+  }
+
+  figcaption {
+    counter-increment: figures;
+    background: rgba(color(shadow), .5);
+    font-style: italic;
+    padding: size(normal);
+    position: relative;
+    z-index: 600;
+
+    @include before("fig." counter(figures, decimal-leading-zero)) {
+      @include font-size(smaller);
+      font-style: normal;
+    }
+  }
+}
+
+.section-title {
+  counter-increment: sections;
+
+  @include before("part " counter(sections, decimal-leading-zero) ". ") {
+    text-transform: uppercase;
+  }
+}
+
+.prev,
+.next {
+  @extend %button;
+  @include font-size(large);
+  @include translateY(-50%);
+  background: rgba(color(shadow), .25);
+  cursor: pointer;
+  display: inline-block;
+  padding: size(smallest) size(smaller);
+  position: absolute;
+  top: 50%;
+
+  #{$focus} {
+    background: color(accent);
+  }
+}
+
+.prev {
+  left: size(smallest);
+}
+
+.next {
+  right: size(smallest);
+}
+
+.DOITDOIDOIT {
+  @include animation(DOITDOIDOIT 300ms steps(1) infinite);
+  background: image-url('ui/doit.png') scroll percentage(random()) percentage(random());
+}
+
+@each $slide in $slides {
+  .#{$slide} {
+    $x: random(200) * 1%;
+    $x: if(random(3) == 1, 0 - $x, $x);
+    $y: (random(200)) * 1%;
+    $y: if(random(3) == 1, 0 - $y, $y);
+    @include translate3d($x, $y, 0);
+  }
+
+  [id='#{$slide}'] {
+    @include is-toggle {
+      ~ .#{$slide} {
+        @include translate3d(0, 0, 0);
+        opacity: 1;
+        z-index: 500;
+      }
+    }
+  }
+}
+
+.narration {
+  @extend %is-hidden;
+}
+
+.master-title {
+  p { font-style: italic; }
+}

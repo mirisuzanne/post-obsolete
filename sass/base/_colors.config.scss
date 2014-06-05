@@ -1,0 +1,33 @@
+// Colors
+// ======
+
+$base-colors: (
+  'black': #000,
+  'white': #fff,
+  'gray': #666,
+
+  'blue': hsl(195, 85%, 62%),
+  'orange': hsl(24, 100%, 62%),
+  'yellow': hsl(45, 85%, 62%),
+  'green': hsl(75, 65%, 62%),
+  'pink': hsl(330, 85%, 62%),
+  'red': hsl(0, 85%, 62%),
+);
+
+
+// Guide
+// -----
+
+$colors: (
+  text: 'white',
+  shadow: 'black',
+  inset: 'black',
+  back: 'blue' (shade: 65%),
+
+  border: 'black',
+
+  action: 'blue' (tint: 60%),
+  focus: 'blue' (shade: 15%),
+
+  accent: 'red',
+);

@@ -1,0 +1,30 @@
+// Button Config
+// =============
+
+%button-reset {
+  @include reset-box-model;
+  background: none;
+  color: color(text);
+  cursor: pointer;
+  font: inherit;
+
+  &:focus { outline: 0; }
+}
+
+%button {
+  @include transition(all 150ms);
+  background: color(accent);
+  border: 2px solid color(border);
+  border-radius: size(smaller);
+  display: inline-block;
+  padding: size(normal) size(medium);
+}
+
+%button-focus {
+  @include scale3d(1.2, 1.2, 0);
+}
+
+%button-active {
+  @include box-shadow(0 0 size(smallest) color(inset) inset);
+  @include scale3d(.75, .75, 0);
+}
