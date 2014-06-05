@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
   <meta charset="utf-8">
 
@@ -10,7 +9,7 @@
 
   <!-- Site Info -->
   <meta name="robots" content="index, follow" />
-  <meta name="author" content="Eric A. Meyer" />
+  <meta name="author" content="Eric M. Suzanne" />
   <meta name="language" content="en-us" />
 
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
@@ -18,43 +17,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
 
   <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/screen.css">
-
-  <!-- Modernizr -->
-  <script src="js/plugins/modernizr-2.5.3.min.js"></script>
-  <script src="js/plugins/modernizr.selectors.js"></script>
-
 </head>
 <body>
 
-<figure role="banner">
-  <div class="media">
-    <iframe src="http://player.vimeo.com/video/45108609?byline=0&amp;portrait=0" width="624" height="351" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-  </div>
-  <figcaption>
-    This website is also a performance with
-    <a href="https://vimeo.com/45108609">video</a>,
-    <a href="">text</a>,
-    <a href="transparencies.pdf">transparencies</a>,
-    <a href="handout.pdf">handouts</a>,
-    <a href="https://docs.google.com/presentation/d/1J6SY3On2ymbYOHV_mXQ5OYgBpA6sJ6SiUrBJ7gYEbOQ/edit">a slideshow</a>,
-    whiskey, party hats, and dancing.
-    For the full experience you should do everything at once.
-    <strong>
-      Press PLAY on the video,
-      then follow along with the arrows.
-    </strong>
-  </figcaption>
-</figure>
+<button class="instigate"><b>Large Button</b></button>
 
-<div role="main">
+<video class="sound-and-fury">
+  <!-- hello iOS, Safari and IE9 -->
+  <source src="video/post-obsolete.mp4" type="video/mp4">
+  <!-- Hello Chrome and Firefox (and Opera?) -->
+  <source src="video/post-obsolete.webm" type="video/webm">
+  <!-- Hello Firefox and Opera -->
+  <source src="video/post-obsolete.ogv" type="video/ogg">
+  <!-- Hello legacy -->
+  <a href="https://vimeo.com/45108609" class="fail">
+    Video not supported. <i class="frown">:(</i>
+  </a>
+</video>
 
-<input type="radio" name="slide-toggles" id="maintitle" checked>
+<main role="main">
+
+<input type="radio" name="slide-toggles" id="start" checked autofocus>
+<input type="radio" name="slide-toggles" id="maintitle">
 <input type="radio" name="slide-toggles" id="booktitle">
 <input type="radio" name="slide-toggles" id="youtube">
 <input type="radio" name="slide-toggles" id="church">
@@ -82,86 +70,90 @@
 <input type="radio" name="slide-toggles" id="dogs">
 <input type="radio" name="slide-toggles" id="trans">
 
+<section class="slide start">
+  <label for="maintitle" class="next DOITDOIDOIT">»</label>
+</section>
+
 <header class="slide maintitle">
   <nav class="slidenav">
-    <label for="">«</label>
+    <label for="start" class="prev">«</label>
     <label for="booktitle" class="next">»</label>
   </nav>
 
-  <figure>
-    <img src="img/no-book.png" alt="" />
-  </figure>
+  <div class="the-shitz">
+    <div class="image"><img src="images/trans/no-book.png" alt=""/></div>
 
-  <h1>
-    The Obsolete Book in a Post-Obsolete World,
-    as Represented by a Post-Obsolete Book About Dance.
-  </h1>
-  <p>
-    (An Archival Rhizome Ecology in Ten Parts,
-    and A Reflection on the Obsolescence of Obsolescence,
-    Documented on the Cloud,
-    and Open-Sourced as a Defense Against Post-Post-Obsolescence).
-  </p>
+    <div class="master-title">
+      <h1>
+        The Obsolete Book in a Post-Obsolete World,
+        as Represented by a Post-Obsolete Book About Dance.
+      </h1>
+      <p>
+        (An Archival Rhizome Ecology in Ten Parts,
+        and A Reflection on the Obsolescence of Obsolescence,
+        Documented on the Cloud,
+        and Open-Sourced as a Defense Against Post-Post-Obsolescence).
+      </p>
+    </div>
+  </div>
+
 </header>
 
 <!-- PART 1 -->
-<div class="slide booktitle">
+<section class="slide booktitle">
   <nav class="slidenav">
     <label for="maintitle" class="prev">«</label>
     <label for="youtube" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <h2>The Book is Obsolete.</h2>
+  <h2 class="section-title">The Book is Obsolete.</h2>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       The goal of this website
       (and accompanying audio-tape)
       is to memorialize the book
       as an obsolete cultural artifact.
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
-<div class="slide youtube">
+<section class="slide youtube">
   <nav class="slidenav">
     <label for="booktitle" class="prev">«</label>
     <label for="church" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <figure>
-    <img src="img/face.png" alt="" />
+  <figure class="the-shitz">
+    <div class="image"><img src="images/trans/face.png" alt=""/></div>
     <figcaption>
       You know, books are, like, obsolete or whatever.
     </figcaption>
   </figure>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       Here is <a href="http://www.youtube.com/watch?v=BrXhyXY-8pk">Allwaswell934</a>
       explaining the problem on YouTube:
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
-<div class="slide church">
+<section class="slide church">
   <nav class="slidenav">
     <label for="youtube" class="prev">«</label>
     <label for="magic" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <figure>
-    <img src="img/church.jpg" alt="" />
+  <figure class="the-shitz">
+    <div class="image"><img src="images/trans/church.png" alt=""/></div>
     <figcaption>
       The entire area is connected with lines,
       and numbered for consistent reference.
     </figcaption>
   </figure>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       Without attempting to re-animate the dead pages of a dead industry,
       we would like to preserve what remains of the book in memory.
@@ -169,18 +161,17 @@
       so our memorial will have to find physical form
       through the power of ritual.
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
-<div class="slide magic">
+<section class="slide magic">
   <nav class="slidenav">
     <label for="church" class="prev">«</label>
     <label for="wordtitle" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <figure>
-    <img src="img/magic.png" alt="" />
+  <figure class="the-shitz">
+    <div class="image"><img src="images/trans/magic.png" alt=""/></div>
     <figcaption>
       It would be one way to send the remaining left wing media cabal
       a message they would not forget.
@@ -189,42 +180,40 @@
     </figcaption>
   </figure>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       and post-post-religious transubstantiation.
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
 <!-- PART 2 -->
-<div class="slide wordtitle">
+<section class="slide wordtitle">
   <nav class="slidenav">
     <label for="magic" class="prev">«</label>
     <label for="bone" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <h2>The Book as Word.</h2>
+  <h2 class="section-title">The Book as Word.</h2>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       I was unable to procure the blood of Christ
       for proper communion,
       so we'll have to make do with a stand-in
       for that as well.
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
-<div class="slide bone">
+<section class="slide bone">
   <nav class="slidenav">
     <label for="wordtitle" class="prev">«</label>
     <label for="definitiontitle" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <figure>
-    <img src="img/bone.png" alt="" />
+  <figure class="the-shitz">
+    <div class="image"><img src="images/trans/bone.png" alt=""/></div>
     <figcaption>
       Despite the Spider's tendency to kill his enemies,
       he encountered several foes more than once,
@@ -237,7 +226,7 @@
     </figcaption>
   </figure>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       We must consider, at this point,
       what is the proper literary blood-avatar
@@ -259,38 +248,36 @@
     <p>
       Good.
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
 <!-- PART 3 -->
-<div class="slide definitiontitle">
+<section class="slide definitiontitle">
   <nav class="slidenav">
     <label for="bone" class="prev">«</label>
     <label for="maginot" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <h2>The Word as Definition.</h2>
+  <h2 class="section-title">The Word as Definition.</h2>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       That's good, but not good enough.
       What we really need is the blood of words.
       Perhaps the definitions of words will suffice?
       Let's look at the definition of "Rhizome":
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
-<div class="slide maginot">
+<section class="slide maginot">
   <nav class="slidenav">
     <label for="definitiontitle" class="prev">«</label>
     <label for="fan" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <figure>
-    <img src="img/maginot.jpg" alt="" />
+  <figure class="the-shitz">
+    <div class="image"><img src="images/trans/maginot.png" alt=""/></div>
     <figcaption>
       The Maginot Line,
       named for the French Minister of Ant Farms, André Maginot,
@@ -298,7 +285,7 @@
     </figcaption>
   </figure>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       <strong>Rhizome</strong>: <em>noun</em>   <br />
       "A rootlike subterranean stem,
@@ -307,18 +294,17 @@
       and sends up shoots progressively
       from the upper surface."
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
-<div class="slide fan">
+<section class="slide fan">
   <nav class="slidenav">
     <label for="maginot" class="prev">«</label>
     <label for="meaningtitle" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <figure>
-    <img src="img/fan.png" alt="" />
+  <figure class="the-shitz">
+    <div class="image"><img src="images/trans/fan.png" alt=""/></div>
     <figcaption>
       "Fanboy" and "Fangirl" redirect here.
       For other uses, see
@@ -326,43 +312,41 @@
     </figcaption>
   </figure>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       <em>Used in a sentence:</em>   <br />
       "With a knife,
       cut the parent rhizome into segments,
       so each has its own leaf fan."
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
 <!-- PART 4 -->
-<div class="slide meaningtitle">
+<section class="slide meaningtitle">
   <nav class="slidenav">
     <label for="fan" class="prev">«</label>
     <label for="snail" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <h2>Definition as Meaning.</h2>
+  <h2 class="section-title">Definition as Meaning.</h2>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       I don't know what that means: "it's own leaf fan".
       Clearly we must go deeper.
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
-<div class="slide snail">
+<section class="slide snail">
   <nav class="slidenav">
     <label for="meaningtitle" class="prev">«</label>
     <label for="pentitle" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <figure>
-    <img src="img/snail.gif" alt="" />
+  <figure class="the-shitz">
+    <div class="image"><img src="images/trans/snail.png" alt=""/></div>
     <figcaption>
       I'm not sure what "meaning" looks like,
       so I found a snail instead.
@@ -372,7 +356,7 @@
     </figcaption>
   </figure>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       Perhaps what we need isn't the definition,
       but the meaning.
@@ -382,38 +366,36 @@
     <p>
       We need the very concept of "meaning".
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
 <!-- PART 5 -->
-<div class="slide pentitle">
+<section class="slide pentitle">
   <nav class="slidenav">
     <label for="snail" class="prev">«</label>
     <label for="fountainpen" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <h2>Meaning as Pen.</h2>
+  <h2 class="section-title">Meaning as Pen.</h2>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       Unfortunately "The Concept of Meaning"
       is a too abstract for our purposes.
       We need an object that can be used
       in the ritual of transubstantiation.
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
-<div class="slide fountainpen">
+<section class="slide fountainpen">
   <nav class="slidenav">
     <label for="pentitle" class="prev">«</label>
     <label for="obsoletetitle" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <figure>
-    <img src="img/pen.png" alt="" />
+  <figure class="the-shitz">
+    <div class="image"><img src="images/trans/pen.png" alt=""/></div>
     <figcaption>
       The Fountain of Youth is a legendary pen
       that reputedly restores the youth of anyone who
@@ -426,7 +408,7 @@
     </figcaption>
   </figure>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       Perhaps we can simply look to the pen,
       as an old and reliable vessel for the transfer
@@ -441,29 +423,27 @@
       as defined above,
       which is (in turn) an obsolete book.
     </p>
-  </div>
-
-</div>
+  </aside>
+</section>
 
 <!-- PART 6 -->
-<div class="slide obsoletetitle">
+<section class="slide obsoletetitle">
   <nav class="slidenav">
     <label for="fountainpen" class="prev">«</label>
     <label for="abacus" class="next">»</label>
   </nav>
 
-  <h2>The Pen is Obsolete.</h2>
-</div>
+  <h2 class="section-title">The Pen is Obsolete.</h2>
+</section>
 
-<div class="slide abacus">
+<section class="slide abacus">
   <nav class="slidenav">
     <label for="obsoletetitle" class="prev">«</label>
     <label for="sorrytitle" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <figure>
-    <img src="img/abacus.gif" alt="" />
+  <figure class="the-shitz">
+    <div class="image"><img src="images/trans/abacus.png" alt=""/></div>
     <figcaption>
       There are numerous consumer devices
       created specifically for use with the lap.
@@ -474,7 +454,7 @@
     </figcaption>
   </figure>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       Pens also seem obsolete,
       replaced by computers.
@@ -483,20 +463,19 @@
       I didn't write this by hand,
       I wrote it on my laptop.
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
 <!-- PART 7 -->
-<div class="slide sorrytitle">
+<section class="slide sorrytitle">
   <nav class="slidenav">
     <label for="abacus" class="prev">«</label>
     <label for="lathe" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <h2>This is a Side Note (sorry (sorrysorry) sorry).</h2>
+  <h2 class="section-title">This is a Side Note (sorry (sorrysorry) sorry).</h2>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       The obsolescence of the pen
       doesn't stop me from carrying one in my pocket every day,
@@ -510,18 +489,17 @@
       Does anyone have a pencil?
       Remember pencil sharpeners?
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
-<div class="slide lathe">
+<section class="slide lathe">
   <nav class="slidenav">
     <label for="sorrytitle" class="prev">«</label>
     <label for="cloudtitle" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <figure>
-    <img src="img/lathe.png" alt="" />
+  <figure class="the-shitz">
+    <div class="image"><img src="images/trans/lathe.png" alt=""/></div>
     <figcaption>
       a = bed,
       b = carriage (with cross-slide and toolpost),
@@ -534,7 +512,7 @@
     </figcaption>
   </figure>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       It's like obsolescence doesn't make a thing obsolete,
       it just helps narrow the scope of use cases.
@@ -546,28 +524,27 @@
     <p>
       We're off topic.
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
 <!-- PART 8 -->
-<div class="slide cloudtitle">
+<section class="slide cloudtitle">
   <nav class="slidenav">
     <label for="lathe" class="prev">«</label>
     <label for="play" class="next">»</label>
   </nav>
 
-  <h2>The Pen as Computer as Tablet as Cloud as Architecture.</h2>
-</div>
+  <h2 class="section-title">The Pen as Computer as Tablet as Cloud as Architecture.</h2>
+</section>
 
-<div class="slide play">
+<section class="slide play">
   <nav class="slidenav">
     <label for="cloudtitle" class="prev">«</label>
     <label for="farm" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <figure>
-    <img src="img/play.png" alt="" />
+  <figure class="the-shitz">
+    <div class="image"><img src="images/trans/play.png" alt=""/></div>
     <figcaption>
       In meteorology,
       a cloud is a visible mass of liquid droplets
@@ -579,25 +556,24 @@
     </figcaption>
   </figure>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       The pen being (at best) post-obsolete,
       I'm replacing the pen with a Computer,
       which I've replaced with a tablet,
       and subsequently with "the cloud".
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
-<div class="slide farm">
+<section class="slide farm">
   <nav class="slidenav">
     <label for="play" class="prev">«</label>
     <label for="architecturetitle" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <figure>
-    <img src="img/farm.gif" alt="" />
+  <figure class="the-shitz">
+    <div class="image"><img src="images/trans/farm.png" alt=""/></div>
     <figcaption>
       Old Major, the boar on the Manor Farm,
       calls the animals for a meeting,
@@ -609,7 +585,7 @@
     </figcaption>
   </figure>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       However,
       the cloud is simply a set of protocols
@@ -618,28 +594,27 @@
       which are simply warehouses,
       which is a type of architecture.
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
 <!-- PART 9 -->
-<div class="slide architecturetitle">
+<section class="slide architecturetitle">
   <nav class="slidenav">
     <label for="farm" class="prev">«</label>
     <label for="handshake" class="next">»</label>
   </nav>
 
-  <h2>Architecture as Obsolete Book.</h2>
-</div>
+  <h2 class="section-title">Architecture as Obsolete Book.</h2>
+</section>
 
-<div class="slide handshake">
+<section class="slide handshake">
   <nav class="slidenav">
     <label for="architecturetitle" class="prev">«</label>
     <label for="ritualtitle" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <figure>
-    <img src="img/handshake.jpg" alt="" />
+  <figure class="the-shitz">
+    <div class="image"><img src="images/trans/handshake.png" alt=""/></div>
     <figcaption>
       Who among us doesn't feel better when we have a great set of nails to show off?
       Do coat the outside of the nails with polish or ridge fillers,
@@ -650,27 +625,26 @@
     </figcaption>
   </figure>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       Since we have architecture all around us,
       we can just use that for our ritual.
       Agreed?
       Good.
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
 <!-- PART 10 -->
-<div class="slide ritualtitle">
+<section class="slide ritualtitle">
   <nav class="slidenav">
     <label for="handshake" class="prev">«</label>
     <label for="dance" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <h2>A Ritual Dance in Memory of the Architectural Post-Book.</h2>
+  <h2 class="section-title">A Ritual Dance in Memory of the Architectural Post-Book.</h2>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       I've prepared a ritual of transubstantiation
       around the architecture of this room:
@@ -683,18 +657,17 @@
       "How to Dance"
       and it has instructions for a Waltz.
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
-<div class="slide dance">
+<section class="slide dance">
   <nav class="slidenav">
     <label for="ritualtitle" class="prev">«</label>
     <label for="dogs" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <figure>
-    <img src="img/dance.png" alt="" />
+  <figure class="the-shitz">
+    <div class="image"><img src="images/trans/dance.png" alt=""/></div>
     <figcaption>
       Each character (letter or numeral)
       is represented by a unique sequence of dots and dashes.
@@ -707,7 +680,7 @@
     </figcaption>
   </figure>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       The Waltz is a simple 3/4 Beat.
     </p>
@@ -725,18 +698,17 @@
       with a tortoise and basketball hoop
       till death do you part.
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
-<div class="slide dogs">
+<section class="slide dogs">
   <nav class="slidenav">
     <label for="dance" class="prev">«</label>
     <label for="trans" class="next">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <figure>
-    <img src="img/dogs.jpg" alt="" />
+  <figure class="the-shitz">
+    <div class="image"><img src="images/trans/dogs.png" alt=""/></div>
     <figcaption>
       I have more pictures
       <a href="http://images.lmgtfy.com/?q=mating+diagram">like this</a>.
@@ -745,7 +717,7 @@
     </figcaption>
   </figure>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       Take your time.
       Pause the tape, if needed.
@@ -802,18 +774,16 @@
     <p>
       Now turn and face the shrine.
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
-<div class="slide trans">
+<section class="slide trans">
   <nav class="slidenav">
     <label for="dogs" class="prev">«</label>
-    <label for="">»</label>
   </nav>
-  <span class="narration-toggle">?</span>
 
-  <figure>
-    <img src="img/trans.jpg" alt="" />
+  <figure class="the-shitz">
+    <div class="image"><img src="images/trans/trans.png" alt=""/></div>
     <figcaption>
       The chalice is a euphamism,
       covered in transparent cloth
@@ -825,7 +795,7 @@
     </figcaption>
   </figure>
 
-  <div class="narration">
+  <aside class="narration">
     <p>
       Speaking together: "Rhizome".         <br />
       And again: "Rhizome"                  <br />
@@ -845,30 +815,27 @@
       Go, drink and be merry,
       our work here is done.
     </p>
-  </div>
-</div>
+  </aside>
+</section>
 
-</div><!-- /[role="main"] -->
+</main>
 
 <footer role="contentinfo">
-  <ul>
-    <li>
-      Creative Commons [cc] 2012
-      <a href="http://eric.andmeyer.com/">Eric A Meyer</a>.
-    </li>
-    <li>
-      Thanks to <a href="http://www.michelleellsworth.com/">Michelle Ellsworth</a>,
-      <a href="http://jrada.tumblr.com/">Julie Rada</a>,
-      and <a href="http://www.myspace.com/widowsbane">The Widow's Bane</a>.
-    </li>
-    <li>
-      <a href="https://github.com/ericam/post-obsolete">View the source on GitHub</a>.
-    </li>
-  </ul>
+  <label for="wtf">??!?!</label>
+  <input type="checkbox" id="wtf" />
+  <div class="shhhhhhhh">
+    Creative Commons [cc] 2014
+    <a href="http://eric.andmeyer.com/">Eric M Suzanne</a>.
+    Thanks to <a href="http://www.michelleellsworth.com/">Michelle Ellsworth</a>,
+    <a href="http://jrada.tumblr.com/">Julie Rada</a>,
+    and <a href="http://www.myspace.com/widowsbane">The Widow's Bane</a>.
+    <a href="https://github.com/ericam/post-obsolete">View the source on GitHub</a>.
+  </div>
 </footer>
 
-<!-- Scripts -->
-<script src="js/plugins/viewport.js"></script>
+<!-- JavaScript -->
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/local.js"></script>
 
 </body>
 </html>

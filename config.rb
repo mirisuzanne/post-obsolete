@@ -1,15 +1,14 @@
-require 'susy'
-require 'modular-scale'
-require 'breakpoint'
-require 'accoutrement'
 # Require any additional compass plugins here.
 
+require 'susy'
+require 'breakpoint'
+require 'accoutrement'
 
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "css"
 sass_dir = "sass"
-images_dir = "img"
+images_dir = "images"
 javascripts_dir = "js"
 fonts_dir = "fonts"
 

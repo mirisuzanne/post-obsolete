@@ -1,0 +1,85 @@
+// Base Output
+// ===========
+
+// html/body
+// ---------
+
+@include establish-baseline;
+@include border-box-sizing;
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+html {
+  background: color(back);
+  color: color(text);
+  text-shadow:
+    0 1px 0 color(shadow),
+    0 0 size(smallest)/2 color(shadow);
+}
+
+[role='main'] {
+  @include stretch;
+  counter-reset: figures sections;
+  display: none;
+
+  .instigate.is-gone-forever ~ & { display: block; }
+}
+
+.is-gone-forever { display: none; }
+
+
+// Headers
+// -------
+
+h1 { @extend %h1; }
+
+h2 { @extend %h2; }
+
+h3 { @extend %h3; }
+
+
+// Links
+// -----
+
+a {
+  #{$link} { @extend %link; }
+
+  #{$focus} { @extend %link-focus; }
+}
+
+
+// Inline Elements
+// ---------------
+
+em { font-style: italic; }
+
+strong { font-weight: bold; }
+
+
+// Paragraph
+// ---------
+
+p { @extend %paragraph-styles; }
+
+
+// Lists
+// -----
+
+ol,
+ul {
+  @extend %list-styles;
+
+  ol,
+  ul {
+    @extend %nested-list-styles;
+  }
+}
+
+ol { @extend %ordered-list-styles; }
+
+ul { @extend %undered-list-styles; }
+

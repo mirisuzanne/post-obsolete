@@ -1,20 +1,17 @@
-//-----------------------------------------------------------------------------
-// Base
+// Screen
+// ======
 
-@import "_base/base";
+@import "compass/reset";
 
-//-----------------------------------------------------------------------------
-// General
+@import "base/requirements.config";
+@import "base/scale.config";
+@import "base/colors.config";
+@import "base/typography.config";
+@import "base/layout.config";
 
-@import "_general/root";
-@import "_general/type";
+@import "base/base";
 
-//-----------------------------------------------------------------------------
-// Layout
-
-@import "layout";
-
-//-----------------------------------------------------------------------------
-// Modules
-
-@import "_modules/main";
+@import "components/buttons.config";
+@import "components/sound-and-fury";
+@import "components/slides";
+@import "components/contentinfo";

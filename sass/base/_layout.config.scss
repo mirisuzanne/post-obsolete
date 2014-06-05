@@ -1,0 +1,9 @@
+// Layout Config
+// =============
+
+$susy: (
+  columns: 8,
+  gutters: size(normal)/size(largest),
+  column-width: size(largest),
+  gutter-position: inside-static,
+);
