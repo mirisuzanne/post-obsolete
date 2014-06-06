@@ -32,41 +32,39 @@ $slides:
   @include align-items(stretch);
   opacity: 0;
   overflow: auto;
-  padding: size(largest);
+  padding: size(normal);
   z-index: -1;
 }
 
 .the-shitz {
+  @include background(no-repeat scroll center);
+  @include background-size(contain);
   @include display-flex;
   @include flex-direction(column);
+  @include justify-content(flex-end);
   @include flex(1);
   z-index: -1;
 
-  .image {
-    @include flex(1);
-    position: relative;
-  }
-
-  img {
-    @include translate3d(-50%, -50%, 0);
-    left: 50%;
-    min-height: 100%;
-    max-width: 100%;
-    position: absolute;
-    top: 50%;
-  }
-
   figcaption {
     counter-increment: figures;
-    background: rgba(color(shadow), .5);
     font-style: italic;
-    padding: size(normal);
     position: relative;
     z-index: 600;
 
-    @include before("fig." counter(figures, decimal-leading-zero)) {
-      @include font-size(smaller);
+    @include before("fig." counter(figures, decimal-leading-zero) " — ") {
       font-style: normal;
+    }
+
+    &:before, span {
+      background: color(text);
+      color: color(shadow);
+      text-shadow: 0 0 size(smallest) color(text);
+
+      a {
+        #{$link} { color: color('blue'); }
+
+        #{$focus} { color: color('red'); }
+      }
     }
   }
 }
@@ -81,32 +79,31 @@ $slides:
 
 .prev,
 .next {
-  @extend %button;
+  @include display-flex;
+  @include align-items(center);
   @include font-size(large);
-  @include translateY(-50%);
-  background: rgba(color(shadow), .25);
+  @include stretch-y;
   cursor: pointer;
-  display: inline-block;
-  padding: size(smallest) size(smaller);
-  position: absolute;
-  top: 50%;
+  padding: size(smaller);
 
   #{$focus} {
-    background: color(accent);
+    padding: size(large);
   }
+
+  b { display: block; }
 }
 
 .prev {
-  left: size(smallest);
+  left: 0;
 }
 
 .next {
-  right: size(smallest);
+  right: 0;
 }
 
 .DOITDOIDOIT {
   @include animation(DOITDOIDOIT 300ms steps(1) infinite);
-  background: image-url('ui/doit.png') scroll percentage(random()) percentage(random());
+  background: rgba(color('shadow'), .125) image-url('ui/doit.png') scroll percentage(random()) percentage(random());
 }
 
 @each $slide in $slides {
@@ -133,6 +130,10 @@ $slides:
   @extend %is-hidden;
 }
 
-.master-title {
+.maintitle {
+  .the-shitz {
+    @include justify-content(space-between);
+  }
+
   p { font-style: italic; }
 }

@@ -8,6 +8,10 @@
   position: absolute;
   top: 0;
   z-index: 1000;
+
+  span {
+    background: color(shadow);
+  }
 }
 
 [for='wtf'] {

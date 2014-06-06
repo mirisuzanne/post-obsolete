@@ -17,6 +17,8 @@
 
 .instigate {
   @extend %button-reset;
+  @include background(image-url('trans/no-book.png') scroll center);
+  @include background-size(cover);
   @include stretch;
   text-transform: uppercase;
   width: 100%;
@@ -27,6 +29,7 @@
     @include animation(DOITDOIDOIT 300ms steps(1) infinite);
     @include background(image-url('ui/doit.png') scroll percentage(random()) percentage(random()));
     @include background-size(300% auto);
+    border: 2px solid color(border);
     cursor: pointer;
     padding: size(large);
 

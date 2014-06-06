@@ -13,8 +13,6 @@
 
 %button {
   @include transition(all 150ms);
-  background: color(accent);
-  border: 2px solid color(border);
   border-radius: size(smaller);
   display: inline-block;
   padding: size(normal) size(medium);
