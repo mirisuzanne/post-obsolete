@@ -15,7 +15,7 @@
   @include transition(all 150ms);
   border-radius: size(smaller);
   display: inline-block;
-  padding: size(normal) size(medium);
+  padding: size(small) size(medium);
 }
 
 %button-focus {

@@ -77,16 +77,24 @@ $slides:
   }
 }
 
+
+// Slidenav
+// --------
+
 .prev,
 .next {
-  @include display-flex;
-  @include align-items(center);
+  @extend %button;
   @include font-size(large);
-  @include stretch-y;
+  @include transition(all 300ms 1s, padding 150ms 0, background 150ms 0);
   cursor: pointer;
-  padding: size(smaller);
+  opacity: 0;
+  padding: 0 size(smallest);
+  position: absolute;
 
   #{$focus} {
+    @include animation(DOITDOIDOIT 300ms steps(1) infinite);
+    @include rotate(0);
+    background-image: image-url('ui/doit-green.png');
     padding: size(large);
   }
 
@@ -95,6 +103,10 @@ $slides:
 
 .prev {
   left: 0;
+
+  #{$focus} {
+    background-image: image-url('ui/doit.png');
+  }
 }
 
 .next {
@@ -106,6 +118,10 @@ $slides:
   background: rgba(color('shadow'), .125) image-url('ui/doit.png') scroll percentage(random()) percentage(random());
 }
 
+
+// Position
+// --------
+
 @each $slide in $slides {
   .#{$slide} {
     $x: random(200) * 1%;
@@ -113,6 +129,26 @@ $slides:
     $y: (random(200)) * 1%;
     $y: if(random(3) == 1, 0 - $y, $y);
     @include translate3d($x, $y, 0);
+
+    .prev {
+      border-radius: percentage(random());
+      top: percentage(random(90)/100);
+
+      #{$focus} {
+        border-radius: percentage(random());
+        padding: size(largest) * random() size(largest) * random() size(largest) * random() size(largest) * random();
+      }
+    }
+
+    .next {
+      border-radius: percentage(random());
+      top: percentage(random(90)/100);
+
+      #{$focus} {
+        border-radius: percentage(random());
+        padding: size(largest) * random() size(largest) * random() size(largest) * random() size(largest) * random();
+      }
+    }
   }
 
   [id='#{$slide}'] {
@@ -121,14 +157,27 @@ $slides:
         @include translate3d(0, 0, 0);
         opacity: 1;
         z-index: 500;
+
+        .prev,
+        .next {
+          opacity: 1;
+        }
+
+        .prev {
+          @include rotate(180deg * random() - 90deg);
+        }
+
+        .next {
+          @include rotate(180deg * random() - 90deg);
+        }
       }
     }
   }
 }
 
-.narration {
-  @extend %is-hidden;
-}
+
+// Main Title
+// ----------
 
 .maintitle {
   .the-shitz {
@@ -136,4 +185,11 @@ $slides:
   }
 
   p { font-style: italic; }
+}
+
+// Narration
+// ---------
+
+.narration {
+  @extend %is-hidden;
 }
