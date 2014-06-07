@@ -24,7 +24,10 @@ $colors: (
   border: 'black',
 
   action: 'blue' (tint: 60%),
-  focus: 'blue' (shade: 15%),
+  focus: action (shade: 15%),
+
+  action dark: 'blue' (shade: 5%),
+  focus dark: action dark (shade: 15%),
 
   accent: 'red',
 
