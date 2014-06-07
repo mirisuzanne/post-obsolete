@@ -1,0 +1,19 @@
+// Tooltips
+// ========
+
+.tooltip-text {
+  @include translate3d(-50%, -50%, 0);
+  background: color(shadow);
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.tooltip {
+  display: inline-block;
+
+  &:hover {
+    .tooltip-text { display: inline; }
+  }
+}
