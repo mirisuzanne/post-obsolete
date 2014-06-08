@@ -2,18 +2,29 @@
 // ========
 
 .tooltip-text {
+  @include font-size(large);
   @include translate3d(-50%, -50%, 0);
-  background: color(shadow);
+  background: none !important;
+  color: color(text) !important;
   display: none;
-  position: fixed;
-  top: 50%;
+  font-style: normal;
   left: 50%;
+  position: fixed;
+  text-shadow: none !important;
+  top: 50%;
+  z-index: 800;
+
+  i {
+    background: color(shadow);
+  }
 }
 
 .tooltip {
   display: inline-block;
 
   &:hover {
+    text-decoration: line-through;
+
     .tooltip-text { display: inline; }
   }
 }

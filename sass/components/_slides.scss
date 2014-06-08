@@ -31,7 +31,8 @@ $slides:
   @include justify-content(center);
   @include align-items(stretch);
   opacity: 0;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   padding: size(normal);
   z-index: -1;
 }
@@ -90,6 +91,7 @@ $slides:
   opacity: 0;
   padding: 0 size(smallest);
   position: absolute;
+  z-index: 900;
 
   #{$focus} {
     @include animation(DOITDOIDOIT 300ms steps(1) infinite);
@@ -190,6 +192,40 @@ $slides:
 // Narration
 // ---------
 
+[for='narration-toggle'] {
+  @include background-size(contain);
+  @include replace-text('ui/ear.png');
+  background-position: center;
+  bottom: 0;
+  height: size(normal);
+  left: 0;
+  position: absolute;
+  width: size(normal);
+
+  &:hover + .narration {
+    display: block;
+  }
+}
+
 .narration {
-  @extend %is-hidden;
+  @include translate3d(-50%, -50%, 0);
+  display: none;
+  max-height: 80%;
+  overflow: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 600;
+
+  span {
+    background: color(stop);
+  }
+}
+
+[id='narration-toggle'] {
+  @include is-toggle {
+    ~ [role='main'] .narration {
+      display: block;
+    }
+  }
 }
