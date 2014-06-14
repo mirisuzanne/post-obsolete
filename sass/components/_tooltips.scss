@@ -21,6 +21,7 @@
 
 .tooltip {
   display: inline-block;
+  text-decoration: underline;
 
   &:hover {
     text-decoration: line-through;

@@ -16,15 +16,21 @@
 
 [for='wtf'] {
   @include font-size(smaller);
+  @include transition(opacity 200ms);
   bottom: 0;
   cursor: pointer;
+  opacity: .5;
   position: absolute;
   right: size(smallest);
   text-transform: uppercase;
   z-index: 1000;
 
-  &:hover ~ .shhhhhhhh {
-    display: block;
+  &:hover {
+    opacity: 1;
+
+    ~ .shhhhhhhh {
+      display: block;
+    }
   }
 }
 

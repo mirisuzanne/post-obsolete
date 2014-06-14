@@ -195,15 +195,22 @@ $slides:
 [for='narration-toggle'] {
   @include background-size(contain);
   @include replace-text('ui/ear.png');
+  @include transition(opacity 200ms);
   background-position: center;
   bottom: 0;
+  cursor: pointer;
   height: size(normal);
   left: 0;
+  opacity: .5;
   position: absolute;
   width: size(normal);
 
-  &:hover + .narration {
-    display: block;
+  &:hover {
+    opacity: 1;
+
+    + .narration {
+      display: block;
+    }
   }
 }
 
