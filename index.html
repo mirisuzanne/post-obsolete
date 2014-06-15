@@ -37,7 +37,7 @@
   </b>
 </button>
 
-<video class="sound-and-fury">
+<video class="sound-and-fury" preload>
   <!-- hello iOS, Safari and IE9 -->
   <source src="video/post-obsolete.mp4" type="video/mp4">
   <!-- Hello Chrome and Firefox (and Opera?) -->
@@ -82,7 +82,20 @@
 <input type="radio" name="slide-toggles" id="trans">
 
 <section class="slide start">
-  <label for="maintitle" class="next DOITDOIDOIT"><b>»</b></label>
+  <nav class="slidenav">
+    <label for="maintitle" class="next"><b>»</b></label>
+  </nav>
+
+  <label for="narration-toggle">transcript</label>
+  <aside class="narration">
+    <p>
+    <span>
+      Please turn to the first page of your handout,
+      or open
+      <a href="http://ericam.github.com/post-obsolete">ericam.github.com/post-obsolete</a>.
+    </span>
+    </p>
+  </aside>
 </section>
 
 <header class="slide maintitle">
@@ -1392,6 +1405,8 @@
     </p>
   </aside>
 </section>
+
+<a href="" class="FIN is-gone-forever">Start over (please)</a>
 
 </main>
 

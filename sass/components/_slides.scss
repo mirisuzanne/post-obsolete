@@ -86,7 +86,7 @@ $slides:
 .next {
   @extend %button;
   @include font-size(large);
-  @include transition(all 150ms 0, opacity 300ms 1s);
+  @include transition(all 150ms 0, opacity 1s 2s);
   cursor: pointer;
   opacity: 0;
   padding: 0 size(smallest);
@@ -113,12 +113,13 @@ $slides:
 
 .next {
   right: 0;
+
+  .MOOOVEALONG & {
+    @include animation(DOITDOIDOIT 300ms steps(1) infinite);
+    background: rgba(color('shadow'), .125) image-url('ui/doit.png') scroll percentage(random()) percentage(random());
+  }
 }
 
-.DOITDOIDOIT {
-  @include animation(DOITDOIDOIT 300ms steps(1) infinite);
-  background: rgba(color('shadow'), .125) image-url('ui/doit.png') scroll percentage(random()) percentage(random());
-}
 
 
 // Position
@@ -187,6 +188,11 @@ $slides:
   }
 
   p { font-style: italic; }
+}
+
+.trans.MOOOVEALONG {
+  @include transition(opacity 2s);
+  opacity: 0 !important;
 }
 
 // Narration

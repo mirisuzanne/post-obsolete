@@ -29,6 +29,7 @@ html {
   .instigate.is-gone-forever ~ & { display: block; }
 }
 
+.is-hidden { @extend %is-hidden; }
 .is-gone-forever { display: none; }
 
 

@@ -60,7 +60,7 @@
   }
 }
 
-.redgreen {
+.redgreen, .FIN {
   @extend %button-reset;
   @extend %button;
   @include animation(
@@ -69,7 +69,6 @@
   @include background(image-url('ui/doit.png') scroll percentage(random()) percentage(random()));
   @include background-size(300% auto);
   @include font-size(larger);
-  @include translate3d(-50%, -50%, 0);
   border: 2px solid color(border);
   color: color(text);
   cursor: pointer;
@@ -79,18 +78,30 @@
   text-shadow:
     0 1px 0 color(shadow),
     0 0 size(smallest)/2 color(shadow);
-  top: 50%;
+  z-index: 900;
 
   &:hover, &:focus {
     @include animation-play-state(paused);
   }
 
+  &.is-gone-forever, &.MOOOVEALONG {
+    display: none;
+  }
+}
+
+.FIN {
+  @include translate3d(-50%, 0, 0);
+  top: 20%;
+}
+
+.redgreen {
+  @include before('Pause the tape!!!?!');
+  @include translate3d(-50%, -50%, 0);
+  top: 50%;
+
   &.is-paused {
     @include animation-play-state(paused);
+    @include before('Start the tape???!?');
     background-image: image-url('ui/doit-green.png');
-  }
-
-  &.is-gone-forever {
-    display: none;
   }
 }

@@ -20,6 +20,63 @@ $(function () {
       return false;
     });
 
+    video[0].addEventListener('ended', function(event) {
+      $('.FIN').toggleClass('is-gone-forever');
+    }, false);
+
+    var triggers = {
+      '.start': 11,
+      '.maintitle': 40,
+      '.booktitle': 53,
+      '.youtube': 62,
+      '.church': 80,
+      '.magic': 87,
+      '.wordtitle': 101,
+      '.bone': 133,
+      '.definitiontitle': 151,
+      '.maginot': 166,
+      '.fan': 175,
+      '.meaningtitle': 186,
+      '.snail': 200,
+      '.pentitle': 215,
+      '.fountainpen': 241,
+      '.obsoletetitle': 246,
+      '.abacus': 256,
+      '.sorrytitle': 290,
+      '.lathe': 308,
+      '.cloudtitle': 316,
+      '.play': 328,
+      '.farm': 341,
+      '.architecturetitle': 348,
+      '.handshake': 357,
+      '.ritualtitle': 382,
+      '.dance': 410,
+      '.redgreen': 424,
+      '.dogs': 521,
+      '.trans': 566,
+    };
+
+    var old = 'none';
+
+    video[0].addEventListener('timeupdate', function(event) {
+      var now = parseInt(this.currentTime, 10);
+      doIT(now);
+    }, false);
+
+    function doIT(t){
+      var toDo = 'none';
+
+      $.each(triggers, function( key, value ){
+        if (t > (value - 1)) { toDo = key; }
+      });
+
+      if (old != toDo) {
+        $(toDo).addClass('MOOOVEALONG');
+        old = toDo;
+        delete triggers[toDo];
+      }
+    }
+
     // Store keycode variables for easier readability
     var keycodes = {
         SPACE: 32,
