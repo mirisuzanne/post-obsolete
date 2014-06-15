@@ -46,3 +46,51 @@
     @include font-size(large);
   }
 }
+
+
+// Red Green
+// ---------
+
+@include keyframes(hellooooooo) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.redgreen {
+  @extend %button-reset;
+  @extend %button;
+  @include animation(
+    DOITDOIDOIT 300ms steps(1) infinite,
+    hellooooooo 300ms 1s 1 both);
+  @include background(image-url('ui/doit.png') scroll percentage(random()) percentage(random()));
+  @include background-size(300% auto);
+  @include font-size(larger);
+  @include translate3d(-50%, -50%, 0);
+  border: 2px solid color(border);
+  color: color(text);
+  cursor: pointer;
+  left: 50%;
+  padding: size(large);
+  position: absolute;
+  text-shadow:
+    0 1px 0 color(shadow),
+    0 0 size(smallest)/2 color(shadow);
+  top: 50%;
+
+  &:hover, &:focus {
+    @include animation-play-state(paused);
+  }
+
+  &.is-paused {
+    @include animation-play-state(paused);
+    background-image: image-url('ui/doit-green.png');
+  }
+
+  &.is-gone-forever {
+    display: none;
+  }
+}
