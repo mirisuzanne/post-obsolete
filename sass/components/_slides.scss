@@ -73,8 +73,9 @@ $slides:
 .section-title {
   counter-increment: sections;
 
-  @include before("part " counter(sections, decimal-leading-zero) ". ") {
-    text-transform: uppercase;
+  @include before("Part " counter(sections, decimal-leading-zero) " // ") {
+    @include font-size(medium);
+    display: block;
   }
 }
 
