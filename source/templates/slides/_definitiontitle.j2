@@ -1,0 +1,20 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('definitiontitle',
+  prev='bone',
+  next='maginot'
+  ) %}
+
+  {{ slide.section('The Word as Definition.') }}
+
+  {% call slide.transcript() %}
+  {% call slide.p() %}
+    That's good, but not good enough.
+    What we really need is the blood of words.
+    Perhaps the definitions of words will suffice?
+    Let's look at the definition of "Rhizome":
+  {% endcall %}
+  {% endcall %}
+
+{% endcall %}

@@ -1,0 +1,44 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('maintitle',
+  prev='start',
+  next='booktitle',
+  el='header'
+  ) %}
+
+  {% call slide.shitz('no-book', wrap=true) %}
+    <h1>
+      The Obsolete Book in a Post-Obsolete World,
+      as Represented by a
+      {{ utility.tooltip('Post-Obsolete',
+        'See also: Post-Academic, Pre-Apocalyptic, Post-Prandial,
+        Pre-Post-Modern, Post-Post-Rock,
+        The Posthumous works of Kurt Vonnegut Jr.,
+        Wistful Regret, etc.'
+      ) }}
+      <a href="http://www.amazon.com/How-Dance-Anita-Wright-ebook/dp/B00D45YURW/ref=sr_1_9" target="_blank">
+        Book About Dance
+      </a>.
+    </h1>
+
+    <p>
+      (An
+      {{ utility.tooltip('Archival',
+        'Accumulates a mound of sticks and debris up the asshole.
+        [Neotoma and other genera, family Muridae: many species.]'
+      ) }}
+      Rhizome Ecology in Ten Parts,
+      and A Reflection on the
+      {{ utility.tooltip('Obsolescence of Obsolescence,',
+        'The condition that distinguishes animals and plants
+        from inorganic matter, including the capacity for growth,
+        reproduction, and YouTube video blogs. See
+        vlogger (noun) and vlogging (noun).'
+      ) }}
+      Documented on the Cloud,
+      and Open-Sourced as a Defense Against Post-Post-Obsolescence).
+    </p>
+  {% endcall %}
+
+{% endcall %}

@@ -1,0 +1,42 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('abacus',
+  prev='obsoletetitle',
+  next='sorrytitle'
+  ) %}
+
+  {% call slide.shitz('abacus') %}
+    There are numerous
+    {{ utility.tooltip('consumer devices',
+      'May be very low-tech
+      and consist of rolled-up socks
+      or condoms filled with liquids or gel.
+      If it is not used, it may be lost,
+      and the shape of the clothing
+      may become visibly "empty".') }}
+    created specifically for use with the lap.
+    One early consumer product designed for the lap was the
+    {{ utility.tooltip('lapdog.',
+      "An economic and political system
+      in which a country's trade and industry are controlled
+      by private owners for love of The Game.
+      For the racehorse, see %s"
+      % utility.link('Lap-dog', 'http://en.wikipedia.org/wiki/Lap-dog') ) }}
+    A small dog, usually a terrier,
+    which was bred to sit in the lap of a wealthy
+    or fashionable European woman.
+  {% endcall %}
+
+  {% call slide.transcript() %}
+    {% call slide.p() %}
+      Pens also seem obsolete,
+      replaced by computers.
+    {% endcall %}
+    {% call slide.p() %}
+      I didn't write this by hand,
+      I wrote it on my laptop.
+    {% endcall %}
+  {% endcall %}
+
+{% endcall %}

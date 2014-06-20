@@ -1,0 +1,35 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('start',
+  next='maintitle'
+  ) %}
+
+  <div class="how-to">
+    <h1>You pressed the button! Yay!</h1>
+
+    <ol>
+      <li>
+        When you hear the bell, turn the page!
+        (using arrow keys, or on-screen arrows)
+      </li>
+      <li>
+        You can hover over
+        {{ utility.tooltip('underlined text',
+          'OMG DON"T HOVER NOW NO STOP STOPSTOP') }}
+        for extra commentary.
+        For other uses, see
+        {{ utility.link('Endnote (disambiguation).',
+          'http://en.wikipedia.org/wiki/Endnote_(disambiguation)') }}
+      </li>
+    </ol>
+  </div>
+
+  {{ slide.nav_link('Turn the page NOW!!!!? »', 'maintitle', 'first-page-turn') }}
+
+  {{ slide.transcript(
+    'Please turn to the first page of your handout and follow along, or open %s'
+    % utility.link('ericam.github.com/post-obsolete', 'http://ericam.github.com/post-obsolete')
+    ) }}
+
+{% endcall %}

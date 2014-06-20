@@ -1,0 +1,20 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('pentitle',
+  prev='snail',
+  next='fountainpen'
+  ) %}
+
+  {{ slide.section('Meaning as Pen.') }}
+
+  {% call slide.transcript() %}
+    {% call slide.p() %}
+      Unfortunately "The Concept of Meaning"
+      is a too abstract for our purposes.
+      We need an object that can be used
+      in the ritual of transubstantiation.
+    {% endcall %}
+  {% endcall %}
+
+{% endcall %}

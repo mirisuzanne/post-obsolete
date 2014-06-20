@@ -1,0 +1,36 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('magic',
+  prev='church',
+  next='wordtitle'
+  ) %}
+
+  {% call slide.shitz('magic') %}
+    It would be one way to send the remaining
+    {{ utility.tooltip('left wing media cabal',
+      'For a book to produce "lift",
+      it must be printed at a suitable angle of attack relative to the
+      flow of hot air past the spine.'
+    ) }}
+    a message they would
+    {{ utility.tooltip('not forget.',
+      "This is an assessment intended to measure the reader's knowledge,
+      skill, aptitude, physical fitness, or classification
+      regarding other topics (e.g., beliefs).
+      YOU SHOULD BE TAKING NOTES."
+    ) }}
+    Bought and paid for by the left wing
+    {{ utility.tooltip('radical',
+      'Early political growth is one of the functions
+      of the apical meristem.'
+    ) }}
+    supporters.
+    DNC, George Soros and Company, etc.
+  {% endcall %}
+
+  {{ slide.transcript(
+    'and post-post-religious transubstantiation.'
+    ) }}
+
+{% endcall %}

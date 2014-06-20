@@ -1,0 +1,17 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('booktitle',
+  prev='maintitle',
+  next='youtube'
+  ) %}
+
+  {{ slide.section('The Book is Obsolete.') }}
+
+  {{ slide.transcript(
+    'The goal of this website
+    (and accompanying audio-tape)
+    is to memorialize the book
+    as an obsolete cultural artifact.') }}
+
+{% endcall %}

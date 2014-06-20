@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  {%- import "_site.data.j2" as site -%}
+  {%- import "_utility.macros.j2" as utility %}
+
+  <!-- Page Info -->
+  <title>{{ site.short_title }}</title>
+  <meta name="description" content="{{ site.title }}">
+
+  <!-- Site Info -->
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="{{ site.author }}" />
+  <meta name="language" content="en-us" />
+  <link type="text/plain" rel="author" href="humans.txt" />
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+  <meta http-equiv="cleartype" content="on">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1" />
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="viewport" content="initial-scale=1">
+
+  <!-- Styles -->
+  {% block css %}
+  {{ utility.styles(site.css) }}
+  {% endblock %}
+</head>
+<body>
+<input type="checkbox" id="narration-toggle">
+
+<button class="instigate">
+  <b>
+    {{ utility.tooltip('Large', 'DO IT DO IT! DOITDOITDOIT!') }}
+    Button
+  </b>
+</button>
+
+{{ utility.video('post-obsolete', 'https://vimeo.com/45108609') }}
+
+<main role="main">
+  {% block main %}{% endblock %}
+  <a href="" class="FIN is-gone-forever">Start over (please)</a>
+</main>
+
+{% include "_contentinfo.j2" %}
+
+<!-- JavaScript -->
+{% block js %}
+{{ utility.scripts(site.js) }}
+{% endblock %}
+
+</body>
+</html>

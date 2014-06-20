@@ -1,0 +1,70 @@
+{% macro wrap(slug, prev=none, next=none, el='div') %}
+  <{{ el }} class="slide {{ slug }}">
+    {{ caller() }}
+
+    {{ nav(prev, next) }}
+  </{{ el }}>
+{% endmacro %}
+
+{% macro section(title) %}
+  <h2 class="section-title">{{ title }}</h2>
+{% endmacro %}
+
+{% macro shitz(img, wrap=false) %}
+  <div class="the-shitz" style="background-image: url(images/trans/{{ img }}.png);">
+    <img src="images/trans/{{ img }}.png" alt="" class="is-gone-forever"/>
+    {% if wrap %}
+      {{ caller() }}
+    {% else %}
+      <figcaption>
+      <span>
+        {{ caller() }}
+      </span>
+      </figcaption>
+    {% endif %}
+  </div>
+{% endmacro %}
+
+{% macro toggles(slides) %}
+  {%- for slide in slides -%}
+    <input type="radio" name="slide-toggles" id="{{ slide }}" {%- if loop.first %} checked autofocus {%- endif %} />
+  {% endfor %}
+{% endmacro %}
+
+{% macro nav(prev, next) %}
+  <nav class="slidenav">
+    {% if prev %}
+      {{ nav_link('«', prev, 'prev') }}
+    {% endif %}
+    {% if next %}
+      {{ nav_link('»', next, 'next') }}
+    {% endif %}
+  </nav>
+{% endmacro %}
+
+{% macro nav_link(text, for, classes='') %}
+  <label for="{{ for }}" class="{{ classes }}"><b>{{ text }}</b></label>
+{% endmacro %}
+
+{% macro transcript(content) %}
+  <label for="narration-toggle">transcript</label>
+  <aside class="narration">
+    {% if content %}
+      {{ p(content) }}
+    {% else %}
+      {{ caller() }}
+    {% endif %}
+  </aside>
+{% endmacro %}
+
+{% macro p(content) %}
+  <p>
+  <span>
+    {% if content %}
+      {{ content }}
+    {% else %}
+      {{ caller() }}
+    {% endif %}
+  </span>
+  </p>
+{% endmacro %}

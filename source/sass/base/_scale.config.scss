@@ -1,0 +1,28 @@
+// Scale
+// =====
+
+
+// Base Size
+// ---------
+$base-font-size: 24px;
+
+
+// Ratio
+// -----
+$ratio: major-third;
+
+
+// Sizes
+// -----
+$font-sizes: (
+  largest   : make-size(6),
+  larger    : make-size(4),
+  large     : make-size(3),
+  medium    : make-size(1),
+  normal    : make-size(0),
+  small     : make-size(-.5),
+  smaller   : make-size(-2),
+  smallest  : make-size(-4),
+);
+
+$sizes: $font-sizes;

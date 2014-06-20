@@ -1,0 +1,38 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('snail',
+  prev='meaningtitle',
+  next='pentitle'
+  ) %}
+
+  {% call slide.shitz('snail') %}
+    I'm not sure what "meaning" looks like,
+    so I found a snail instead.
+    Snails are known for their
+    {{ utility.tooltip('slow pace',
+      'For the Buzzcocks song, see %s'
+      % utility.link('Spiral Scratch (EP)', 'http://en.wikipedia.org/wiki/Spiral_Scratch_(EP)') ) }}
+    and positive attitude in the
+    {{ utility.tooltip('face of adversity.',
+      'Institutionalized beliefs, values, grand narratives,
+      sci-fi novellas, and %s
+      are all believed to assist in generating systemic privilege —
+      often explicitly maintained by legal means such as
+      immigration laws and lyric poetry.'
+      % utility.link('Garrison Keillor', 'http://en.wikipedia.org/wiki/Nostalgia') ) }}
+  {% endcall %}
+
+  {% call slide.transcript() %}
+    {% call slide.p() %}
+      Perhaps what we need isn't the definition,
+      but the meaning.
+      Not just the meaning of one word,
+      but all the meanings of all the words.
+    {% endcall %}
+    {% call slide.p() %}
+      We need the very concept of "meaning".
+    {% endcall %}
+  {% endcall %}
+
+{% endcall %}

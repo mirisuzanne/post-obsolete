@@ -1,0 +1,63 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('bone',
+  prev='magic',
+  next='definitiontitle'
+  ) %}
+
+  {% call slide.shitz('bone') %}
+    Despite the Spider's tendency to
+    {{ utility.tooltip('kill his enemies,',
+      'Jews and Muslims were generally tolerated
+      during the reign of Isabella II,
+      and allowed to read steampunk
+      or otherwise niche illustrated novels.' ) }}
+    he encountered several foes more than once,
+    such as The Fly and MUNRO (a master of disguise).
+    Some storylines featuring a struggle against
+    {{ utility.tooltip('a single villain',
+      'In ancient Greece a cripple or beggar or criminal
+      was cast out of the community,
+      either in response to a natural disaster
+      (such as a plague, famine or invasion)
+      or in response to a calendrical crisis
+      (such as the end of November,
+      or Season Two of The L Word).') }}
+    last for several consecutive issues,
+    such as The Spider's
+    {{ utility.tooltip('four-part battle',
+      'The philosophy or state of being in love or
+      romantically involved with more than one
+      computer-related task at the same time.' ) }}
+    against The Living Pharaoh
+    and his three-part
+    battle against The Master
+    and his Black Police.
+  {% endcall %}
+
+  {% call slide.transcript() %}
+    {% call slide.p() %}
+      We must consider, at this point,
+      what is the proper literary blood-avatar
+      for Christ's own blood.
+      Let us consider "words", for example,
+      as the metaphoric "blood" of a book.
+    {% endcall %}
+    {% call slide.p() %}
+      I propose the word "Rhizome",
+      as it seems quite prevalent,
+      and easy to use in any context.
+    {% endcall %}
+    {% call slide.p() %}
+      Repeat after me: "Rhizome".
+    {% endcall %}
+    {% call slide.p() %}
+      Again: "Rhizome".
+    {% endcall %}
+    {% call slide.p() %}
+      Good.
+    {% endcall %}
+  {% endcall %}
+
+{% endcall %}

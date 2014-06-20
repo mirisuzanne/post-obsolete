@@ -1,0 +1,10 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('obsoletetitle',
+  prev='fountainpen',
+  next='abacus'
+  ) %}
+
+  {{ slide.section('The Pen is Obsolete.') }}
+{% endcall %}

@@ -1,0 +1,30 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('church',
+  prev='youtube',
+  next='magic'
+  ) %}
+
+  {% call slide.shitz('church') %}
+    The entire area is
+    {{ utility.tooltip('connected with lines,',
+      'This "bad apple paradigm" is considered by some to be an "easy way out".'
+    ) }}
+    and
+    {{ utility.tooltip('numbered',
+      'For the other uses of the word "index" on this site, see %s'
+      % utility.link('Index (disambiguation)', 'http://en.wikipedia.org/wiki/Wikipedia:Index_(disambiguation)')
+    ) }}
+    for consistent reference.
+  {% endcall %}
+
+  {{ slide.transcript(
+    "Without attempting to re-animate the dead pages of a dead industry,
+    we would like to preserve what remains of the book in memory.
+    We can't reliably maintain the book-object itself <i>in situ</i>,
+    so our memorial will have to find physical form
+    through the power of ritual."
+    ) }}
+
+{% endcall %}

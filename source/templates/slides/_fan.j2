@@ -1,0 +1,28 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('fan',
+  prev='maginot',
+  next='meaningtitle'
+  ) %}
+
+  {% call slide.shitz('fan') %}
+    "Fanboy" and "Fangirl" redirect here. For
+    {{ utility.tooltip('other uses,',
+      'Fans play an important role in some initiation rites,
+      including the ceremonial sacrifices of animals, ritual suicide,
+      or neopagan witchcraft (see Wicca).' ) }}
+    see
+    {{ utility.link('Fanboy (disambiguation)', 'http://en.wikipedia.org/wiki/Fanboy_(disambiguation)') }}
+  {% endcall %}
+
+  {% call slide.transcript() %}
+    {% call slide.p() %}
+      <em>Used in a sentence:</em><br />
+      "With a knife,
+      cut the parent rhizome into segments,
+      so each has its own leaf fan."
+    {% endcall %}
+  {% endcall %}
+
+{% endcall %}

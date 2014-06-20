@@ -1,7 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    accoutrement (1.0.0.beta.3)
+    accoutrement (1.0.0.beta.5)
       compass (~> 1.0.0.alpha.17)
       sass (~> 3.3)
     breakpoint (2.4.2)
@@ -28,7 +28,7 @@ GEM
       rb-kqueue (>= 0.2)
     multi_json (1.10.1)
     rb-fsevent (0.9.4)
-    rb-inotify (0.9.4)
+    rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     rb-kqueue (0.2.3)
       ffi (>= 0.5.0)

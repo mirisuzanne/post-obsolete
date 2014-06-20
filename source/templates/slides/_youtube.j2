@@ -1,0 +1,27 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('youtube',
+  prev='booktitle',
+  next='church'
+  ) %}
+
+  {% call slide.shitz('face') %}
+    You know, books are, like, obsolete or
+    {{ utility.tooltip('whatever.',
+      'Friedman illustrates good “self-differentiated” books with
+      pictures of stimulation and desire,
+      types of embrace, caressing and kisses,
+      marking with nails, biting and marking with teeth,
+      slapping by hand and corresponding moaning,
+      virile behavior in trans* people, superior coition,
+      and totally hot threesomes.'
+    ) }}
+  {% endcall %}
+
+  {{ slide.transcript(
+    'Here is %s explaining the problem on YouTube:'
+    % utility.link('Allwaswell934', 'http://www.youtube.com/watch?v=BrXhyXY-8pk')
+    ) }}
+
+{% endcall %}

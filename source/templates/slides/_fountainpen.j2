@@ -1,0 +1,51 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('fountainpen',
+  prev='pentitle',
+  next='obsoletetitle'
+  ) %}
+
+  {% call slide.shitz('pen') %}
+    The Fountain of Youth is a legendary pen that
+    {{ utility.tooltip('reputedly restores the youth',
+      'The circumstances may have changed. See also:
+      %s, %s, %s, %s.'
+      % (
+        utility.link('Cargo cult', 'http://en.wikipedia.org/wiki/Cargo_cult'),
+        utility.link('Common sense', 'http://en.wikipedia.org/wiki/Common_sense'),
+        utility.link('Social inertia', 'http://en.wikipedia.org/wiki/Social_inertia'),
+        utility.link('Fluid dynamics', 'http://en.wikipedia.org/wiki/Fluid_dynamics'),
+      ) ) }}
+    of anyone who drinks of its inks.
+    Tales of such a fountain pen have been recounted
+    across the world for
+    {{ utility.tooltip('thousands of years,',
+      'In the third printing of the book this section was removed.' ) }}
+    appearing in the writings by Herodotus,
+    {{ utility.tooltip('the Alexander romance,'
+      'Due to an illness, Kate persuades Ana to take her place
+      and interview 27-year-old Christian Grey,
+      an incredibly successful and wealthy young goat.
+      Ana is instantly attracted to Christian,
+      but also finds him furry.' ) }}
+    and the stories of Donald Duck.
+  {% endcall %}
+
+  {% call slide.transcript() %}
+    {% call slide.p() %}
+      Perhaps we can simply look to the pen
+      as an old and reliable vessel for the transfer
+      of idea into object.
+      The pen, like the concept of meaning,
+      comes before the word,
+      and lives outside it.
+    {% endcall %}
+    {% call slide.p() %}
+      Now this pen is the avatar of meaning,
+      representing the word "rhizome" as defined above,
+      which is (in turn) an obsolete book.
+    {% endcall %}
+  {% endcall %}
+
+{% endcall %}

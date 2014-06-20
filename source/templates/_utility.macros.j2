@@ -1,0 +1,64 @@
+{# Utilities
+   ========= #}
+
+{% macro tooltip(title, tip) %}
+  <span class="tooltip">
+    {{ title }}
+    <span class="tooltip-text">
+    <i>
+      {{ tip }}
+    </i>
+    </span>
+  </span>
+{% endmacro %}
+
+{% macro link(text, url) %}
+  <a href="{{ url }}" target="_blank">{{ text }}</a>
+{% endmacro %}
+
+
+{# Video
+   ----- #}
+
+{% macro video(path, url) %}
+  <video class="sound-and-fury" preload>
+    <!-- hello iOS, Safari and IE9 -->
+    <source src="video/{{ path }}.mp4" type="video/mp4">
+    <!-- Hello Chrome and Firefox (and Opera?) -->
+    <source src="video/{{ path }}.webm" type="video/webm">
+    <!-- Hello Firefox and Opera -->
+    <source src="video/{{ path }}.ogv" type="video/ogg">
+    <!-- Hello legacy -->
+    <a href="{{ url }}" class="fail">
+      Video not supported. <i class="frown">:(</i>
+    </a>
+  </video>
+{% endmacro %}
+
+
+{# Stylesheets
+   ----------- #}
+
+{% macro styles(list) %}
+  {%- for path in list -%}
+    {{ css(path) }}
+  {%- endfor -%}
+{% endmacro %}
+
+{% macro css(path) -%}
+  <link rel="stylesheet" href="css/{{ path }}.css">
+{% endmacro %}
+
+
+{# Scripts
+   ------- #}
+
+{% macro scripts(list) %}
+  {%- for path in list -%}
+    {{ js(path) }}
+  {%- endfor -%}
+{% endmacro %}
+
+{% macro js(path) -%}
+  <script src="js/{{ path }}.js"></script>
+{% endmacro %}

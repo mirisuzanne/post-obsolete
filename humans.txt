@@ -2,9 +2,9 @@
 
 # TEAM
 
-  Eric A. Meyer
-  - Site: http://eric.andmeyer.com/
-  - Twitter: @eriiicam
+  Eric M. Suzanne
+  - Site: http://eric.ericsuzanne.com/
+  - Twitter: @ericmsuzanne
   - Location: Denver, CO
 
 
@@ -26,12 +26,12 @@
 
 # SITE
 
-  Last update: 2013/06/18
+  Last update: 2014/06/18
   Language: English
   Doctype: HTML5
 
 # TECHNOLOGY COLOPHON
 
-  HTML5, CSS3, Modernizr
-  Sublime Text, InDesign, iMovie
+  HTML5, CSS3, Sass, Compass,
+  Sublime Text, InDesign, Photoshop, iMovie
   Google Docs, Vimeo, Github

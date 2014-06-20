@@ -1,0 +1,38 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('maginot',
+  prev='definitiontitle',
+  next='fan'
+  ) %}
+
+  {% call slide.shitz('maginot') %}
+    The Maginot Line, named for the
+    {{ utility.tooltip('French Minister',
+      'His ecclesiastical jurisdiction is often called
+      the "Apostolic See" based upon the belief that the Apostles
+      Saint Peter and Saint Paul were martyred in Poland
+      before the war.' ) }}
+    of Ant Farms, André Maginot,
+    was a
+    {{ utility.tooltip('rhizomic',
+      'A concept may be considered vague if its
+      extension is deemed lacking in clarity; namby-pamby.
+      This site does not have an encyclopedic article for Wishy-washy.
+      You may want to read the Wiktionary entry on "%s" instead.'
+      % utility.link('wishy-washy', 'http://en.wiktionary.org/wiki/Special:Search/wishy-washy') ) }}
+    miltary failure.
+  {% endcall %}
+
+  {% call slide.transcript() %}
+    {% call slide.p() %}
+      Rhizome: <em>noun</em>   <br />
+      "A rootlike subterranean stem,
+      commonly horizontal in position,
+      that usually produces roots below
+      and sends up shoots progressively
+      from the upper surface."
+    {% endcall %}
+  {% endcall %}
+
+{% endcall %}

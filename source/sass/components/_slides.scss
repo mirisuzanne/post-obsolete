@@ -87,21 +87,26 @@ $slides:
 .next {
   @extend %button;
   @include font-size(large);
-  @include transition(all 150ms 0, opacity 1s 2s);
+  @include transition(all 150ms);
   cursor: pointer;
   opacity: 0;
-  padding: 0 size(smallest);
+  padding: 0 size(medium);
   position: absolute;
   z-index: 900;
 
-  #{$focus} {
-    @include animation(DOITDOIDOIT 300ms steps(1) infinite);
-    @include rotate(0);
-    background-image: image-url('ui/doit-green.png');
-    padding: size(large);
+  .slide & {
+    #{$focus} {
+      @include animation(DOITDOIDOIT 300ms steps(1) infinite);
+      @include transform(rotate(0) scale(1.2));
+      background-image: image-url('ui/doit-green.png');
+    }
   }
 
   b { display: block; }
+
+  .MOOOVEALONG & {
+    opacity: 1;
+  }
 }
 
 .prev {
@@ -135,23 +140,15 @@ $slides:
     @include translate3d($x, $y, 0);
 
     .prev {
+      @include rotate(180deg * random() - 90deg);
       border-radius: percentage(random());
       top: percentage(random(90)/100);
-
-      #{$focus} {
-        border-radius: percentage(random());
-        padding: size(largest) * random() size(largest) * random() size(largest) * random() size(largest) * random();
-      }
     }
 
     .next {
+      @include rotate(180deg * random() - 90deg);
       border-radius: percentage(random());
       top: percentage(random(90)/100);
-
-      #{$focus} {
-        border-radius: percentage(random());
-        padding: size(largest) * random() size(largest) * random() size(largest) * random() size(largest) * random();
-      }
     }
   }
 
@@ -161,19 +158,6 @@ $slides:
         @include translate3d(0, 0, 0);
         opacity: 1;
         z-index: 500;
-
-        .prev,
-        .next {
-          opacity: 1;
-        }
-
-        .prev {
-          @include rotate(180deg * random() - 90deg);
-        }
-
-        .next {
-          @include rotate(180deg * random() - 90deg);
-        }
       }
     }
   }
@@ -182,6 +166,26 @@ $slides:
 
 // Main Title
 // ----------
+
+.start {
+  @include flex-direction(column);
+  @include justify-content(space-between);
+}
+
+.first-page-turn {
+  @include font-size(large);
+  @include transition(all 150ms);
+  display: none;
+  text-align: center;
+
+  .MOOOVEALONG & {
+    display: block;
+  }
+
+  #{$focus} {
+    @include scale(1.2);
+  }
+}
 
 .maintitle {
   .the-shitz {

@@ -1,0 +1,18 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('meaningtitle',
+  prev='fan',
+  next='snail'
+  ) %}
+
+  {{ slide.section('Definition as Meaning.') }}
+
+  {% call slide.transcript() %}
+    {% call slide.p() %}
+      I don't know what that means: "it's own leaf fan".
+      Clearly we must go deeper.
+    {% endcall %}
+  {% endcall %}
+
+{% endcall %}

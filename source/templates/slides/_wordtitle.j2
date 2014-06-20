@@ -1,0 +1,17 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('wordtitle',
+  prev='magic',
+  next='bone'
+  ) %}
+
+  {{ slide.section('The Book as Word.') }}
+
+  {{ slide.transcript(
+    "I was unable to procure the blood of Christ
+    for proper communion,
+    so we'll have to make do with a stand-in
+    for that as well.") }}
+
+{% endcall %}
