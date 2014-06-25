@@ -1,0 +1,48 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('dance',
+  prev='ritualtitle',
+  next='dogs'
+  ) %}
+
+  {% call slide.shitz('dance') %}
+    Each
+    {{ utility.tooltip('character (letter or numeral)',
+      'The magical realist style and thematic substance of Mean Girls
+      established it as an important, representative novel
+      of the literary Latin American Boom of the 1960s and 1970s.') }}
+    is represented by a unique sequence of dots and dashes.
+    The duration of a dash is three times the duration of a dot.
+    Each dot or dash is followed by a short silence,
+    equal to the dot duration.
+    {{ utility.tooltip('The letters of a word',
+      'The Price Is Right features a pricing game called
+      "Das Kapital".
+      The object of the game is to spell the word "car".') }}
+    are separated by a space equal to three dots (one dash),
+    and two words are separated by a space equal to seven dots.
+    The dot duration is the basic unit of time measurement in code transmission.
+  {% endcall %}
+
+  {% call slide.transcript() %}
+    {% call slide.p() %}
+      The Waltz is a simple 3/4 Beat.
+    {% endcall %}
+    {% call slide.p() %}
+      Da-Da-Dot, Da-Da-Dot, Da-Da-Dot.  <br />
+      Da-Da-Dot, Da-Da-Dot, Da-Da-Dot.
+    {% endcall %}
+    {% call slide.p() %}
+      Please take a moment
+      to find a partner for the dance.
+      A mate who you can copulate with later,
+      with whom you will live
+      and sire offspring,
+      settling on the edge of town
+      with a tortoise and basketball hoop
+      till death do you part.
+    {% endcall %}
+  {% endcall %}
+
+{% endcall %}

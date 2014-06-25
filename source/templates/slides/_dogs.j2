@@ -1,0 +1,74 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('dogs',
+  prev='dance',
+  next='trans'
+  ) %}
+
+  {% call slide.shitz('dogs') %}
+    I have more pictures
+    {{ utility.link('like this', 'http://images.lmgtfy.com/?q=mating+diagram') }}
+    Some of them
+    {{ utility.tooltip('involve people.',
+      'For the Jazz album by Tadd Dameron and John Coltrane, see %s.'
+      % utility.link('Mating Call', 'http://en.wikipedia.org/wiki/Mating_Call') ) }}
+    The Internet is a beautiful and strange land.
+  {% endcall %}
+
+  <button class="redgreen">
+    <span class="is-hidden">Pause/Play</span>
+  </button>
+
+  {% call slide.transcript() %}
+    {% call slide.p() %}
+      Take your time.
+      Pause the tape, if needed.
+      I can wait.
+    {% endcall %}
+    {% call slide.p() %}
+      Remember:
+      Da-Da-Dot, Da-Da-Dot, Da-Da-Dot.
+      Da-Da-Dot, Da-Da-Dot, Da-Da-Dot.
+    {% endcall %}
+    {% call slide.p() %}
+      That's morse code for "oooooooo",
+      the sound you should make during ritual dances
+      inside obsolete book avatar architectures,
+      made post-obsolete by their use in rituals
+      memorializing the death of books.
+      Say "oooooooo", while you dance.
+    {% endcall %}
+    {% call slide.p() %}
+      Or combine the two
+      (fast, slow, fast):
+      Di-Di-Dit Da-Da-Dot Di-Di-Dit
+      sssssssss ooooooooo sssssssss
+      an SOS cry for help,
+      as the book dies a slow,
+      painful, and hideous death.
+    {% endcall %}
+    {% call slide.p() %}
+      You keep dancing,
+      and I will read a memorial
+      poem in the dead form of a sonnet
+      by a dead man.
+    {% endcall %}
+    <blockquote>
+      {% call slide.p() %}
+        Death, be not proud, though some have called thee
+        Mighty and dreadful, for thou art not so;
+        For those whom thou think'st thou dost over throw
+        Die not, blah blah blah.
+        And dost with poison, war and sickness dwell!
+        And so on...
+        ...death shall be no more. <b>Death thou shalt die</b>.
+      {% endcall %}
+      <cite><span>— John Donne</span></cite>
+    </blockquote>
+    {% call slide.p() %}
+      Now turn and face the shrine.
+    {% endcall %}
+  {% endcall %}
+
+{% endcall %}

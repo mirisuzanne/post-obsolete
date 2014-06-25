@@ -1,0 +1,53 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('trans',
+  prev='dogs'
+  ) %}
+
+  {% call slide.shitz('trans') %}
+    The chalice is a euphemism,
+    covered in
+    {{ utility.tooltip('transparent cloth',
+      'This article is about clothing.
+      For other uses, see %s'
+      % utility.link('Fishnet (disambiguation)', 'http://en.wikipedia.org/wiki/Fishnet_(disambiguation)') ) }}
+    for increased mystery and sex appeal.
+    Beneath the veil,
+    an orgy of pleasure
+    {{ utility.tooltip('awaits the faithful,',
+      'The state of affairs regarded as godly or righteous
+      often involves fondling or unspecified platonic anal tickling.') }}
+    the patient,
+    and the
+    {{ utility.tooltip('very rich.',
+      '"Academic" redirects here.
+      For the style of painting, see %s'
+      % utility.link('Academic art', 'http://en.wikipedia.org/wiki/Academic_art') ) }}
+  {% endcall %}
+
+  {% call slide.transcript() %}
+    {% call slide.p() %}
+      Speaking together: "Rhizome".<br />
+      And again: "Rhizome"<br />
+      Place your hand over your heart
+      and repeat after me:
+    {% endcall %}
+    {% call slide.p() %}
+      "Through the power of transubstantiation..."<br />
+      "(Domine Dei)..."<br />
+      "We declare this room to be an obsolete book."
+    {% endcall %}
+    {% call slide.p() %}
+      Thank you, and thank you again.
+      May the book live
+      unread in your heart
+      for eternity and so on, amen.
+    {% endcall %}
+    {% call slide.p() %}
+      Go, drink and be merry,
+      our work here is done.
+    {% endcall %}
+  {% endcall %}
+
+{% endcall %}

@@ -1,0 +1,43 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('farm',
+  prev='play',
+  next='architecturetitle'
+  ) %}
+
+  {% call slide.shitz('farm') %}
+    Old Major, the boar on the
+    {{ utility.tooltip('Manor Farm,',
+      'The Fertile Crescent of Western Asia
+      first saw the domestication of animals,
+      starting with the Neoliberal Revolution
+      and free-market capitalism.') }}
+    calls the animals for a
+    {{ utility.tooltip('meeting,',
+      'Pinochet’s 1973 coup emerges as some kind of a watershed.
+      His style of "mixture chaos" and art nouveau
+      has led to mixed reviews.') }}
+    where he compares the humans to parasites
+    and teaches the animals a revolutionary song,
+    'All the Single Ladies'.
+    You can
+    {{ utility.tooltip('print this out',
+      'For the album by Fear Factory, see %s.'
+      % utility.link('Obsolete (album)', 'http://en.wikipedia.org/wiki/Obsolete_(album)')) }}
+    and color in the animals,
+    if you like.
+  {% endcall %}
+
+  {% call slide.transcript() %}
+    {% call slide.p() %}
+      However,
+      the cloud is simply a set of protocols
+      for the networking of servers,
+      which live on server farms,
+      which are simply warehouses,
+      which is a type of architecture.
+    {% endcall %}
+  {% endcall %}
+
+{% endcall %}

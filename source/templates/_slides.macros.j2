@@ -33,12 +33,12 @@
 
 {% macro nav(prev, next) %}
   <nav class="slidenav">
-    {% if prev %}
+    {%- if prev -%}
       {{ nav_link('«', prev, 'prev') }}
-    {% endif %}
-    {% if next %}
+    {%- endif -%}
+    {%- if next -%}
       {{ nav_link('»', next, 'next') }}
-    {% endif %}
+    {%- endif -%}
   </nav>
 {% endmacro %}
 
@@ -49,22 +49,22 @@
 {% macro transcript(content) %}
   <label for="narration-toggle">transcript</label>
   <aside class="narration">
-    {% if content %}
+    {%- if content -%}
       {{ p(content) }}
-    {% else %}
+    {%- else -%}
       {{ caller() }}
-    {% endif %}
+    {%- endif -%}
   </aside>
 {% endmacro %}
 
-{% macro p(content) %}
+{% macro p(content) -%}
   <p>
   <span>
-    {% if content %}
+    {%- if content -%}
       {{ content }}
-    {% else %}
+    {%- else -%}
       {{ caller() }}
-    {% endif %}
+    {%- endif -%}
   </span>
   </p>
-{% endmacro %}
+{%- endmacro %}

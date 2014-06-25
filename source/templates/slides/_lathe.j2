@@ -1,0 +1,47 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('lathe',
+  prev='sorrytitle',
+  next='cloudtitle'
+  ) %}
+
+  {% call slide.shitz('lathe') %}
+    {{ utility.tooltip('a = bed,',
+      'Andersen had heard the story as a child,
+      and it likely has its source in folk material,
+      possibly originating from Sweden as it is unknown
+      in North Texas.') }}
+    b = carriage (with cross-slide and toolpost),
+    c = headstock,
+    d = back gear
+    {{ utility.tooltip('(other geartrain',
+      'The longest-running first-run,
+      nationally-syndicated program in American television history.
+      Production was suspended following the 2005–06 season,
+      with a rerun package airing for two years subsequently.') }}
+    nearby below drives leadscrew),
+    e = cone pulley for belt drive from an external power source,
+    {{ utility.tooltip('f = faceplate',
+      'Boym argues that nostalgia is most prevalent
+      while listening to a mixtape of Dylan covers.') }}
+    mounted on spindle,
+    g = tailstock.
+    h = leadscrew.
+  {% endcall %}
+
+  {% call slide.transcript() %}
+    {% call slide.p() %}
+      It's like obsolescence doesn't make a thing obsolete,
+      it just helps narrow the scope of use cases.
+      Once an object is "obsolete"
+      I am free to use it or not use it,
+      as I see fit,
+      any time I want.
+    {% endcall %}
+    {% call slide.p() %}
+      We're off topic.
+    {% endcall %}
+  {% endcall %}
+
+{% endcall %}

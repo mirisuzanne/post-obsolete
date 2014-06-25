@@ -1,0 +1,11 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('architecturetitle',
+  prev='farm',
+  next='handshake'
+  ) %}
+
+  {{ slide.section('Architecture as Obsolete Book.') }}
+
+{% endcall %}

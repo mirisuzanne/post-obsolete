@@ -1,0 +1,35 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('handshake',
+  prev='architecturetitle',
+  next='ritualtitle'
+  ) %}
+
+  {% call slide.shitz('handshake') %}
+    Who among us doesn't
+    {{ utility.tooltip('feel better',
+      'The presence of a happy ending is one of the key points
+      that distinguishes melodrama from massage.') }}
+    when we have a great set of nails to show off?
+    Do coat the outside of the nails with polish or ridge fillers,
+    moisturize the cuticle area,
+    {{ utility.tooltip('and wear gloves.',
+      'Specific criticisms are now being accepted
+      by some leaders of the forensic fingerprint community
+      on behalf of this website,
+      otherwise known as "Not My Problem".') }}
+    Don't use your fingers as letter openers,
+    or push the cuticle back too far.
+  {% endcall %}
+
+  {% call slide.transcript() %}
+    {% call slide.p() %}
+      Since we have architecture all around us,
+      we can just use that for our ritual.
+      Agreed?<br />
+      Good.
+    {% endcall %}
+  {% endcall %}
+
+{% endcall %}

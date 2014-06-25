@@ -1,0 +1,26 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('ritualtitle',
+  prev='handshake',
+  next='dance'
+  ) %}
+
+  {{ slide.section('A Ritual Dance in Memory of the Architectural Post-Book.') }}
+
+  {% call slide.transcript() %}
+    {% call slide.p() %}
+      I've prepared a ritual of transubstantiation
+      around the architecture of this room:
+      a dance about architecture,
+      if you will.
+    {% endcall %}
+    {% call slide.p() %}
+      I don't know how to dance,
+      but I do have a book called
+      "How to Dance"
+      and it has instructions for a Waltz.
+    {% endcall %}
+  {% endcall %}
+
+{% endcall %}

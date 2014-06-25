@@ -1,0 +1,27 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('sorrytitle',
+  prev='abacus',
+  next='lathe'
+  ) %}
+
+  {{ slide.section('This is a Side Note (sorry (sorrysorry) sorry).') }}
+
+  {% call slide.transcript() %}
+    {% call slide.p() %}
+      The obsolescence of the pen
+      doesn't stop me from carrying one in my pocket every day,
+      everywhere I go,
+      and using it on occasion to take notes
+      on paper that I also carry with me.
+    {% endcall %}
+    {% call slide.p() %}
+      How many of you also have a pen?<br />
+      How many of you have paper?<br />
+      Does anyone have a pencil?<br />
+      Remember pencil sharpeners?<br />
+    {% endcall %}
+  {% endcall %}
+
+{% endcall %}

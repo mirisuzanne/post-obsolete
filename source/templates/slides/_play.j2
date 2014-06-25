@@ -1,0 +1,44 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('play',
+  prev='cloudtitle',
+  next='farm'
+  ) %}
+
+  {% call slide.shitz('play') %}
+    In
+    {{ utility.tooltip('meteorology,',
+      'There is no proposed mechanism of action
+      by which the motivations of film actors
+      could affect people and events on Earth
+      that does not contradict well understood basic aspects
+      of good taste and the modernist aesthetic (see Bauhaus).') }}
+    a cloud is a
+    {{ utility.tooltip('visible mass of liquid droplets',
+      "Berengar's position was never diametrically opposed
+      to that of his critics,
+      but the controversy that he aroused
+      forced the Catholic church to clarify all the
+      lyrics in several Hendrix favorites.") }}
+    or frozen crystals made of water
+    or various chemicals
+    suspended in the atmosphere
+    above the surface of a
+    {{ utility.tooltip('planetary body.',
+      'Mitchell was deeply influenced by
+      an East German "slip of a girlyboy"
+      and the poems of Anne Bradstreet.') }}
+    These suspended particles are also known as fullbacks.
+  {% endcall %}
+
+  {% call slide.transcript() %}
+    {% call slide.p() %}
+      The pen being (at best) post-obsolete,
+      I'm replacing the pen with a Computer,
+      which I've replaced with a tablet,
+      and subsequently with "the cloud".
+    {% endcall %}
+  {% endcall %}
+
+{% endcall %}

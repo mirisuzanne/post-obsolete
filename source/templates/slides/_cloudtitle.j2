@@ -1,0 +1,11 @@
+{% import "_utility.macros.j2" as utility %}
+{% import "_slides.macros.j2" as slide %}
+
+{% call slide.wrap('cloudtitle',
+  prev='lathe',
+  next='play'
+  ) %}
+
+  {{ slide.section('The Pen as Computer as Tablet as Cloud as Architecture.') }}
+
+{% endcall %}
