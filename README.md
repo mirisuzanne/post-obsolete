@@ -5,6 +5,6 @@ and A Reflection on the Obsolescence of Obsolescence,
 Documented on the Cloud,
 and Open-Sourced as a Defense Against Post-Post-Obsolescence).**
 
-[Official Site](http://ericam.github.com/post-obsolete/)
+[Official Site](http://www.post-obsolete.com)
 
 
